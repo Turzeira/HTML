@@ -1,0 +1,1251 @@
+<!DOCTYPE html><html
+lang="pt-BR"><head><meta
+charset="UTF-8"><meta
+name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0"><title>Guia de Unidades no CSS | Alura</title><meta
+name="description" content="Nesse guia abordaremos todas as unidades atuais presentes no CSS. Veremos também casos de uso interessantes no dia a dia."><link
+rel="canonical" href="https://www.alura.com.br/artigos/guia-de-unidades-no-css"><link
+rel="icon" href="/assets/favicon.1686744881.ico" /><link
+rel="preconnect" href="https://fonts.googleapis.com"><link
+rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Archivo+Black&display=swap" rel="stylesheet"><link
+rel="stylesheet" href="/bundle,base/_reset,base/base,base/buttons,base/colors-apostilas,base/colors,base/titulos.1690913936.css"><link
+rel="stylesheet" href="/bundle,artigos/artigos,artigos/iframe.1690557002.css"><link
+rel="stylesheet" href="/bundle,cosmos/cosmos-article-list,cosmos/cosmos-content,cosmos/cosmos-header,cosmos/cosmos-media,cosmos/cosmos-related,cosmos/cosmos-webseries,cosmos/cosmos,cosmos/cosmosPodcast,cosmos/highlight.1686744883.css"><meta
+property="og:locale" content="pt_BR"><meta
+property="og:description" content="Nesse guia abordaremos todas as unidades atuais presentes no CSS. Veremos também casos de uso interessantes no dia a dia."><meta
+property="og:title" content="Guia de Unidades no CSS | Alura"><meta
+property="og:site_name" content="Alura"><meta
+property="og:url" content="https://www.alura.com.br/artigos/guia-de-unidades-no-css?_gl=1*1nsovne*_ga*MTY2NzMwODIzOS4xNjg5NzA2Mjcy*_ga_59FP0KYKSM*MTY5MDk3ODg5Mi4xNC4xLjE2OTA5ODQ0MzQuNDQuMC4w*_fplc*Q1NPZE1neWdJY3Z0M2kwdFBCVGp4dlcyUm00NHJHZTBWdkdMYnVIZnl1UzNhJTJCOHVUbGNOeEhGR3hyZWFaY3NUYmxSQzk5eTQ2MEthWlRIVVZ3a1Vpa2xPS1hqQUJLWElLU25MSUc2THRYZjc1ZHFYRFp0YWtSN09aRGNxeGclM0QlM0Q."><meta
+property="og:image" content="https://www.alura.com.br/artigos/assets/guia-de-unidades-no-css/guia-de-unidades-no-css.jpg"><meta
+property="og:image:alt" content="Alura logo"><meta
+property="fb:app_id" content="140078819399376"><meta
+property="og:type" content="website"><meta
+name="twitter:card" content="summary_large_image"><meta
+name="theme-color" content="#2A7AE4"><meta
+name="google-site-verification" content="e-ieHUO1JHyNyCZv0Z8Nu-R3ECPykHiNHHEhPdF35Bk" /><meta
+name="thumbnail" content="https://www.alura.com.br/artigos/assets/guia-de-unidades-no-css/guia-de-unidades-no-css.jpg"> <script>;
+                (function(w, d, s, l, i) {
+                    w[l] = w[l] || [];
+                    w[l].push({
+                        'gtm.start': new Date().getTime(),
+                        event: 'gtm.js'
+                    });
+                    var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                    j.async = true;
+                    j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                    f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayer', 'GTM-TN542JN');</script> <script>;
+                (function(w, d, s, l, i) {
+                    w[l] = w[l] || [];
+                    w[l].push({
+                        'gtm.start': new Date().getTime(),
+                        event: 'gtm.js'
+                    });
+                    var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                    j.async = true;
+                    j.src =
+                        'https://load.stape.alura.com.br/qukryqvi.js?id=' + i + dl;
+                    f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayerAlura', 'GTM-NTLWWLR');</script> <script>;
+                (function(w, d, s, l, i) {
+                    w[l] = w[l] || [];
+                    w[l].push({
+                        'gtm.start': new Date().getTime(),
+                        event: 'gtm.js'
+                    });
+                    var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                    j.async = true;
+                    j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                    f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayerAluraTest', 'GTM-5293HPN');</script>  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-980051072"></script> <script>window.dataLayer = window.dataLayer || [];
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', 'AW-980051072');</script> <script>! function(w, d, t) {
+                    w.TiktokAnalyticsObject = t;
+                    var ttq = w[t] = w[t] || [];
+                    ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"], ttq.setAndDefer = function(t, e) {
+                        t[e] = function() {
+                            t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+                        }
+                    };
+                    for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
+                    ttq.instance = function(t) {
+                        for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) ttq.setAndDefer(e, ttq.methods[n]);
+                        return e
+                    }, ttq.load = function(e, n) {
+                        var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
+                        ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = i, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {};
+                        n = document.createElement("script");
+                        n.type = "text/javascript", n.async = !0, n.src = i + "?sdkid=" + e + "&lib=" + t;
+                        e = document.getElementsByTagName("script")[0];
+                        e.parentNode.insertBefore(n, e)
+                    };
+                    ttq.load("CASS65BC77UAKBUROQ2G");
+                    ttq.page();
+                }(window, document, 'ttq');</script> <script async src='//www.google-analytics.com/analytics.js'></script> <script>var userId = (document.cookie.match('alura.userId=([^;]+)') || [null, null])[1];
+                window.ga = window.ga || function() {
+                    (ga.q = ga.q || []).push(arguments)
+                };
+                ga.l = +new Date;
+
+                                    ga(
+                        'create',
+                        'UA-42101548-1',
+                        'alura.com.br',
+                        'tracker0', {
+                            'siteSpeedSampleRate': 50
+                        }
+                    );
+
+                    if (userId) ga('tracker0.set', 'userId', userId);
+
+                    ga('tracker0.require', 'displayfeatures');
+                    ga('tracker0.send', 'pageview');
+                                    ga(
+                        'create',
+                        'UA-42101548-9',
+                        'alura.com.br',
+                        'tracker1', {
+                            'siteSpeedSampleRate': 50
+                        }
+                    );
+
+                    if (userId) ga('tracker1.set', 'userId', userId);
+
+                    ga('tracker1.require', 'displayfeatures');
+                    ga('tracker1.send', 'pageview');</script> </head><body
+class=""> <script async src="/assets/js/avatarOnError.1686744882.js"></script> <noscript><iframe
+src="https://www.googletagmanager.com/ns.html?id=GTM-TN542JN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe
+src="https://www.googletagmanager.com/ns.html?id=GTM-NTLWWLR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe
+src="https://www.googletagmanager.com/ns.html?id=GTM-5293HPN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>! function(f, b, e, v, n, t, s) {
+                        if (f.fbq) return;
+                        n = f.fbq = function() {
+                            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                        };
+                        if (!f._fbq) f._fbq = n;
+                        n.push = n;
+                        n.loaded = !0;
+                        n.version = '2.0';
+                        n.queue = [];
+                        t = b.createElement(e);
+                        t.async = !0;
+                        t.src = v;
+                        s = b.getElementsByTagName(e)[0];
+                        s.parentNode.insertBefore(t, s)
+                    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+                    fbq('init', '1067810189950610');
+                    fbq('track', 'PageView');</script>  <script type="application/ld+json">{
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://www.alura.com.br",
+          "name": "Alura"
+        }
+      }   
+              ,{
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://www.alura.com.br/artigos",
+            "name": "Artigos"
+          }
+        }
+              ,{
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@id": "https://www.alura.com.br/artigos/front-end",
+            "name": "Front-end"
+          }
+        }
+              ,{
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@id": "https://www.alura.com.br/artigos/guia-de-unidades-no-css",
+            "name": "Guia de Unidades no CSS"
+          }
+        }
+            ]
+    }</script> <link
+rel="stylesheet" href="/assets/css/block/header.1687365821.css"><header
+class="header internalPage"><div
+class="container"><nav
+class="header__nav">
+<a
+href="/" class="header__nav--logo">
+<img
+alt="Alura" src="/assets/img/home/alura-logo.1686744881.svg">
+</a><div
+class="header__nav--busca header-barraBusca"><form
+action="/busca" class="header__nav--busca-form">
+<input
+type="search" class="header__nav--busca-input" id="header-barraBusca-form-campoBusca" name="query" placeholder="O que você quer aprender?" required>
+<button
+class="header__nav--busca-submit" type="submit">
+<svg
+xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15">
+<g
+fill="none" fill-rule="evenodd" stroke="#D7F9FF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" transform="translate(1 1)">
+<path
+d="M13.637 12.86l-3.526-3.527" />
+<circle
+cx="5.667" cy="5.667" r="5.667" />
+</g>
+</svg>
+</button></form></div><div
+class="header__nav--ctas"><div
+class="header__nav--ctas-busca header-utilitario-busca" aria-label="Busca">
+<svg
+width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path
+d="M14.637 13.86L11.111 10.333" stroke="#40A5B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path
+d="M6.667 12.334C9.7968 12.334 12.334 9.7968 12.334 6.667C12.334 3.5372 9.7968 1 6.667 1C3.5372 1 1 3.5372 1 6.667C1 9.7968 3.5372 12.334 6.667 12.334Z" stroke="#40A5B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div>
+<a
+class="header__nav--ctas-entrar header__nav--link-hover" href="https://cursos.alura.com.br/loginForm?urlAfterLogin=https://cursos.alura.com.br/dashboard">Entrar</a>
+<a
+class="header__nav--ctas-matricule" href="/planos-cursos-online">Matricule-se</a></div><div
+class="header__nav--menu"><div
+class="header__nav--menu-link all-courses header__nav--link-hover">
+<span>Todos os</span>
+<span>Cursos</span></div>
+<a
+href="/formacoes" class="header__nav--menu-link header__nav--link-hover">
+<span>Nossas</span>
+<span>Formações</span>
+</a>
+<a
+href="/empresas" class="header__nav--menu-link header__nav--link-hover">
+<span>Para</span>
+<span>Empresas</span>
+</a>
+<a
+href="/dev-em-t" class="header__nav--menu-link header__nav--link-hover">
+<span>Dev</span>
+<span>em &lt;T&gt;</span>
+</a></div></nav></div><div
+class="header__nav--courses"><div
+class="container"><ul
+class="header__nav--courses-list"><li
+class="header__nav--courses-item --programacao">
+<a
+href="/cursos-online-programacao" class="header__nav--courses-item-link">
+Programação                                    <span
+style="color: #00c86f;">_</span>
+</a></li><li
+class="header__nav--courses-item --front-end">
+<a
+href="/cursos-online-front-end" class="header__nav--courses-item-link">
+Front-end                                    <span
+style="color: #6bd1ff;">_</span>
+</a></li><li
+class="header__nav--courses-item --data-science">
+<a
+href="/cursos-online-data-science" class="header__nav--courses-item-link">
+Data Science                                    <span
+style="color: #9cd33b;">_</span>
+</a></li><li
+class="header__nav--courses-item --inteligencia-artificial">
+<a
+href="/cursos-online-inteligencia-artificial" class="header__nav--courses-item-link">
+Inteligência Artificial                                    <span
+style="color: #7b71ff;">_</span>
+</a></li><li
+class="header__nav--courses-item --devops">
+<a
+href="/cursos-online-devops" class="header__nav--courses-item-link">
+DevOps                                    <span
+style="color: #f16165;">_</span>
+</a></li><li
+class="header__nav--courses-item --design-ux">
+<a
+href="/cursos-online-design-ux" class="header__nav--courses-item-link">
+UX & Design                                    <span
+style="color: #dc6ebe;">_</span>
+</a></li><li
+class="header__nav--courses-item --mobile">
+<a
+href="/cursos-online-mobile" class="header__nav--courses-item-link">
+Mobile                                    <span
+style="color: #ffba05;">_</span>
+</a></li><li
+class="header__nav--courses-item --inovacao-gestao">
+<a
+href="/cursos-online-inovacao-gestao" class="header__nav--courses-item-link">
+Inovação & Gestão                                    <span
+style="color: #ff8c2a;">_</span>
+</a></li></ul></div></div></header><section
+class="cosmos-container-color"><div
+class="cosmos-color"><div
+class="cosmos artigos-topo"><div
+class="container">
+<a
+href="/artigos" class="artigos-topo__label">
+Artigos
+</a>
+&gt;
+<a
+class="artigos-topo__label --artigos-strong" href="/artigos/front-end" style="color:#6bd1ff">Front-end</a></div></div></div> <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.alura.com.br/artigos/guia-de-unidades-no-css"
+  },
+  "headline": "Guia de Unidades no CSS",
+  "description": "Nesse guia abordaremos todas as unidades atuais presentes no CSS. Veremos também casos de uso interessantes no dia a dia.",
+  "image": "https://www.alura.com.br/artigos/assets/guia-de-unidades-no-css/guia-de-unidades-no-css.jpg",
+  "datePublished": "2019-01-10",
+    "dateModified": "2021-09-30",
+      "author": {
+        "@type": "Organization",
+    "name": "Alura",
+    "url": "https://www.alura.com.br",
+    "logo": {
+      "@type": "ImageObject",
+    "url": "https://www.alura.com.br/assets/api/share/alura.jpg",
+      "height" : 60, 
+      "width" : 600,
+      "sameAs":["https://www.youtube.com/alura",
+               "https://www.facebook.com/AluraCursosOnline/",
+               "https://twitter.com/aluraonline",
+               "https://www.instagram.com/aluraonline/",
+               "https://play.google.com/store/apps/details?id=br.com.alura.mobi&hl=pt_BR&gl=US",
+               "https://apps.apple.com/br/app/alura-cursos-online/id1225776635"],
+      "contactPoint":{
+      "@type":"ContactPoint",
+     "email":"contato@alura.com.br",
+     "contactType":"customer support"
+     }},
+   "publisher": {
+    "@type": "Organization",
+    "name": "Alura",
+    "url": "https://www.alura.com.br",
+       "reviewedBy": {
+     "@type": "Person",
+     "name": "Paulo Scalercio",
+     "image": "https://www.gravatar.com/avatar/f31703811c670676e826bad4c6afcabe.png?r=PG&size=200x200&date=2023-08-02&d=https%3A%2F%2Fcursos.alura.com.br%2Fassets%2Fimages%2Fforum%2Favatar_p.png"
+   }
+     }}}</script> <section
+class="cosmos-color"><article
+class="cosmos"
+data-ga4-article-name="Guia de Unidades no CSS"
+data-ga4-article-category="Front-end"
+data-ga4-article-author="Paulo Scalercio"
+><div
+class="cosmos-header"><h1>Guia de Unidades no CSS</h1><div
+class="cosmos-image__wrapper">
+<img
+src="assets/guia-de-unidades-no-css/guia-de-unidades-no-css.jpg"
+alt="Guia de Unidades no CSS"
+class="cosmos-image cosmos-banner-top"
+style="border: none; padding: 0px; width: 100%; height: 300px; object-fit: cover; max-width: none;"></div><div
+class="cosmos-header-info"><div
+class="cosmos-author">
+<img
+loading="lazy" class="cosmos-author-img" src="https://www.gravatar.com/avatar/f31703811c670676e826bad4c6afcabe.png?r=PG&size=200x200&date=2023-08-02&d=https%3A%2F%2Fcursos.alura.com.br%2Fassets%2Fimages%2Fforum%2Favatar_p.png" alt="Paulo Scalercio" width="50" height="50"><div><div
+class="cosmos-author-name">Paulo Scalercio</div>
+<time
+class="cosmos-author-date"
+datetime="2021-09-30 15:34">
+Atualizado em 30/09/2021                                    </time></div></div><div
+class="cosmos-container-social-media"><p
+class="cosmos-text-social-media">Compartilhe</p><ul
+class="cosmos-container-flex-social-media"><li
+class="--icon-twitter">
+<a
+href="https://twitter.com/share?url=https://www.alura.com.br/artigos/guia-de-unidades-no-css"></a></li><li
+class="--icon-linkedin">
+<a
+href="https://linkedin.com/shareArticle?url=https://www.alura.com.br/artigos/guia-de-unidades-no-css"></a></li><li
+class="--icon-facebook">
+<a
+href="https://facebook.com/share.php?u=https://www.alura.com.br/artigos/guia-de-unidades-no-css"></a></li><li
+class="--icon-whatsapp">
+<a
+href="https://api.whatsapp.com/send?text=https://www.alura.com.br/artigos/guia-de-unidades-no-css"></a></li></ul></div><div
+class="cosmos-related-gruides"></div></div></div><div
+class="cosmos-header-line"></div><div
+class="article__main-content"><div
+class="cosmos-color cosmos"><p>Quando começamos a lidar com desenvolvimento web, mais especificamente <strong>HTML e CSS</strong>, é bastante comum que fiquemos presos às ferramentas que já conhecemos e temos familiaridade.</p><p>Porém, isso pode se tornar um problema devido ao grande crescimento da Web e, com isso, o surgimento de novos problemas e consequentemente novas soluções. Esse é uma situação corriqueira quando lidamos com unidades de medidas no <strong>CSS</strong>, pela grande variedade, acabamos deixando de lado parte das existentes e não utilizamos, de fato, todo o poder que temos na mão.</p><p>Existem algumas unidades que provavelmente você já está acostumado, como o famoso pixel! Nesse post, abordaremos todas as unidades de medidas presentes atualmente e como elas podem nos ajudar durante sua jornada como desenvolvedor web. Antes de prosseguirmos, precisamos entender qual a diferença entre <strong>medida absoluta</strong> e <strong>medida relativa</strong>.</p><h2 id="medidas-absolutas">Medidas Absolutas</h2><p>Essas são as mais comuns que vemos no dia a dia. São medidas que não estão referenciadas a qualquer outra unidade, ou seja, não dependem de um valor de referência. São unidades de medidas definidas pela física, como o <strong>píxel</strong>, centímetro, metro, etc...</p><p>Essas medidas são fixas e não mudam de acordo com as especificações do dispositivo. Esse tipo de medida é indicada para quando conhecemos perfeitamente as características físicas e as configurações das mídias onde serão exibidos nossos projetos.</p><blockquote><p>Já lançarei um spoiler aqui para você, será que no &quot;mundo real&quot; conheceremos todas as informações de todos os dispositivos? Segura esse pensamento!</p></blockquote><h2 id="medidas-relativas">Medidas Relativas</h2><p>Essas são as que normalmente não estamos habituados. Essas medidas são calculadas tendo como base uma outra unidade de medida definida, como por exemplo</p><p><strong>em</strong> e o <strong>rem</strong> (veremos mais sobre essas duas medidas no decorrer do post). O uso delas é mais apropriado para que possamos fazer ajustes em diferentes dispositivos garantindo um layout consistente e fluido em diversas mídias.</p><p>Devido ao fato de que essas medidas são calculadas pelo browser baseando-se em outra unidade, elas tendem a ser bastante flexíveis. Ou seja, podemos ter resultados diferentes de acordo com o ambiente.</p><p>Para começarmos a caminhar pelas medidas existentes, optei por começar pelas medidas absolutas, uma vez que estamos, normalmente, mais familiarizados com essas. Como diria meu amigo Flávio Almeida, bem começado, metade feito!</p><h2 id="medidas-absolutas-no-css">Medidas absolutas no CSS</h2><h3><strong>Píxels (px)</strong></h3><p>Provavelmente você já conhece ou ouviu falar desse rapaz chamado Píxel. Píxel nada mais é do que os pequenos pontinhos luminosos da tela do seu monitor, celular, televisão, etc... Logo, o píxel é o menor elemento em um dispositivo de exibição!</p><p>Essa é uma medida bastante famosa para os web designers, grande parte dos desenvolvedores web usam o píxel como unidade principal de seus projetos.</p><p>Um detalhe que poucos conhecem é que na verdade, o píxel do CSS <strong>NÃO</strong> é realmente um píxel da tela do dispositivo (hardware), e sim o que chamamos de <a
+href="https://alistapart.com/article/a-pixel-identity-crisis/" target="_blank" rel="noopener"><strong>píxel de referência</strong></a> que geralmente é maior do que o píxel real. O que acaba por torná-lo numa medida abstrata onde é necessário controlar o mapeamento desse píxel de referência para o píxel do hardware (acontece por debaixo dos panos!).</p><p>A definição de píxel de referência no <strong>CSS</strong> é o ângulo visual(0.0213deg) de um píxel em um dispositivo com a densidade de 96dpi a uma distancia de um braço do leitor (28 polegadas), veja na imagem abaixo:</p><p><img
+src="https://www.alura.com.br/artigos/assets/uploads/2018/12/css_reference_pixel-NOVO.png" alt="píxel de referência" loading="lazy" class="cosmos-image" />  </p><p>O benefício desse píxel de referência é que ele leva a proximidade da tela em consideração, ao usarmos um celular que seguramos próximos de nós, o píxel de referência terá o tamanho semelhante ao de um monitor mais distante de nós, por exemplo.  </p>
+<img
+src="https://www.alura.com.br/artigos/assets/uploads/2018/12/fig-03-css-reference-pixel-NOVO.jpg" alt="" loading="lazy" class="cosmos-image" /><p>Portanto, não existe esse papo de que o píxel é &quot;perfeito&quot;. Só se estivermos desenvolvendo um site para um mesmo dispositivo, com um mesmo tamanho de tela e que usa o mesmo navegador, mas sabemos que não é assim que funciona no mundo lá fora!</p><p>Um ponto interessante de se comentar é que recentemente o <a
+href="https://www.casadocodigo.com.br/products/livro-bootstrap4"><strong>boostrap 4</strong></a> deixou de utilizar <strong>PX</strong> e migrou para <strong>REM</strong> , além disso, o uso do píxel nos dá a sensação de que esse é igual ao píxel do hardware, o que pode gerar confusão para novos desenvolvedores.</p><p>Um dos aspectos mais importantes para esses Web Designers é a <strong>escalabilidade e adaptabilidade de um layout</strong>, ou seja, a medida em que as unidades aumentam de uma maneira previsível e razoável, seu layout deve ser capaz de se adequar a essas mudanças.</p><p>De um lado, a ideia de se manter o mesmo aspecto (tamanho) em diversos dispositivos pode parecer atrativa (cuidado com o píxel de referência!), mas do outro lado, temos consequências negativas quando estamos lidando com dispositivos de baixa resolução (blurry rendering).  </p>
+<img
+src="https://www.alura.com.br/artigos/assets/uploads/2018/12/119682_blurry_render.jpg" alt="" loading="lazy" class="cosmos-image" /><h3><strong>Points (pt)</strong></h3><p>A <strong>próxima unidade é Point</strong>. Definitivamente essa unidade é mais conhecida pelos designers, principalmente os que estudam tipografia.</p><p>Essa medida é geralmente utilizada em propriedades relacionadas a fonte do seu projeto. Sua abreviação se dá com a marcação de <strong>pt</strong> e seu uso não é tão comum, você provavelmente verá essa unidade muito raramente.</p><p>Geralmente espera-se que essa medida seja utilizada em folhas de estilo para <strong>impressões</strong>, quando se precisa ter certeza do tamanho da fonte utilizada. Não é recomendada para a estilização em tela!</p><h3><strong>in (inches/polegadas)</strong></h3><p><strong>Polegada ou inch</strong> em inglês é mais uma unidade de medida que conhecemos do mundo das medidas absolutas - geralmente vemos elas quando queremos comprar uma nova TV ou monitor , mas essa unidade também existe no mundo Web.</p><p>Apesar de existirem, elas não costumam ser utilizadas em projetos, uma vez que não existem um uso prático para elas (podemos atingir os mesmos resultados utilizando outras unidades)</p><h3><strong>Centímetro e Milímetro (cm / mm)</strong></h3><p>Nós brasileiros, que adotamos o sistema métrico, conhecemos bem essas duas medidas, que são bastante utilizadas no dia a dia. Apesar de bastante comuns, tanto centímetro e milímetro são pouco usadas no CSS. Assim como o <strong>pt</strong>, o uso dessas duas é esperado para folhas de estilo para <strong>impressões</strong> (medidas mais precisas), evitando que elas sejam aplicadas para exibições em tela.</p><h3><strong>Paica (pc)</strong></h3><p>Também uma unidade pouco usada no mundo web, a <strong>Paica</strong> também vem para o CSS sendo herdada da tipografia. Por não ser uma unidade amplamente conhecida, ela acaba sendo fadada ao esquecimento, mas é sempre importante conhecermos todas as ferramentas que estão à nossa disposição. A relação entre as unidades absolutas é:</p><blockquote><p><code>1 in = 2,54cm = 25,4mm = 72pt = 6pc</code></p></blockquote><h2 id="medidas-relativas-no-css">Medidas Relativas no CSS</h2><h3><strong>Ems (em)</strong></h3><p>Nossa primeira unidade relativa é bastante famosa no mundo <strong>CSS</strong>. Dificilmente você achará algum navegador que não tenha suporte para essa medida, que está presente desde os primórdios. Até para o IE, nós teríamos que usar a versão abaixo da 3.0 para que tivéssemos algum problema.</p><p>Esse definitivamente é um dos pontos que fazem o <strong>em</strong> tão popular. O segundo ponto, com certeza se dá a facilidade de criar layouts fluídos e responsivos.</p><blockquote><p>Mas como funciona esse tal de <strong>em</strong>?Essa unidade muda para os elementos filhos de acordo com o tamanho da fonte (font-size) do elemento pai, então vamos lá. Digamos que temos o seguinte html, me permitindo a licença poética de utilizar a tag style:</p></blockquote><pre><code class="hljs xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-id">#pai</span>{
+        <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+    }
+
+    <span class="hljs-selector-id">#filho</span>{
+        <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2em</span>;
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"pai"</span>&gt;</span>
+    div pai
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"filho"</span>&gt;</span>
+        div filho
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre><p>Acima, temos uma div pai onde estou definindo um <code>font-size</code> de 16px, dentro dessa div, temos uma única div filha. Como havia mencionado, o tamanho definido para a fonte impactará no <strong>em</strong> dos elementos filhos.</p><p>Nesse nosso caso, para a div mais interna (id=filho), <strong>1em será igual a 16px</strong>, seguindo a lógica, <strong>2em será igual a 32px</strong> e assim por diante. Podemos colocar valores como 1.5 também! Nesse nosso caso, <strong>1.5em será igual a 24px</strong> Quando expressamos tamanhos como margin, padding utilizando <strong>em</strong>, isso significa que eles serão relativos ao tamanho da fonte do elemento pai.</p><p>Portanto, de acordo com o tamanho da fonte utilizada em determinado elemento, os elementos filhos serão redimensionados de forma a obedecer a referência a esse tamanho de fonte!</p><p>Uma técnica bastante utilizada consiste justamente em fazer uso desse poder do <strong>em</strong> componentizando nossos elementos. A ideia é que a alteração do tamanho da fonte do elemento pai faça com que todo o componente se modifique e redimensione baseando-se nesse novo valor. Você pode dar uma olhada em um exemplo nesse fiddle:</p> <script async src="//jsfiddle.net/r0od5zbe/2/embed/js,html,css,result/dark/"></script> <p>Caso não consiga visualizar o jsfiddle, o link é <a
+href="https://jsfiddle.net/r0od5zbe/3/" target="_blank" rel="noopener"><strong>esse</strong></a></p><p>Apesar de divertido, o motivo de utilizarmos essa técnica não é para que o usuário tenha um slider e altere o tamanho da fonte rsrs. Mas sim para facilitar a manutenção do componente como um todo, sem ter que sofrer alterando valores de todas as partes do componente. Bem legal né?</p><p>O último ponto que devemos nos atentar ao usar o <strong>em</strong> é que quando usamos essa medida, nós temos que considerar o <code>font-size</code> de todos os elementos pai. Por exemplo, se tivéssemos uma terceira div mais interna no nosso exemplo anterior e definirmos o tamanho da fonte para <strong>2em</strong>, nesse caso esses <strong>2em seriam 64px</strong>, uma vez que o font-size do elemento pai foi definido sendo <strong>32px</strong>(2em)! Pegou o pulo do gato?</p><p>Isso tende a se complicar quando estamos falando de 5, 6, 7 divs aninhadas, provavelmente não será muito divertido calcular isso! Mas a boa notícia é que temos uma unidade que nos ajuda a resolver esse probleminha.</p><h3>Rems (rem, &quot;root em&quot;)</h3><p>O <strong>REM</strong> vem como sucessor do <strong>EM</strong> e ambos compartilham a mesma lógica de funcionamento (font-size), porém a forma de implementação é diferente. Enquanto o <strong>em</strong> está diretamente relacionado ao tamanho da fonte do elemento pai, o <strong>rem</strong> está relacionado com o tamanho da fonte do elemento root (raiz), no caso, a <strong>tag</strong>.</p><p>O fato de que o <strong>rem</strong> se relaciona com o <strong>elemento raiz</strong> resolve aquele problema que tínhamos com diversas divs (elementos) aninhados, uma vez que não haverá essa &quot;herança&quot; de tamanhos, lembra?! Ou seja, não precisaremos ter dor de cabeça tendo que realizar cálculos, uma vez que nos baseamos na tag raiz.</p><p>Exemplificando, sabemos que a tag html é a tag raiz de todo documento html. Dito isso, se definirmos que o <code>font-size</code> desse elemento será de 18px, então <strong>1rem = 18px</strong>, <strong>2rem = 36px</strong> e assim por diante... Normalmente os browsers especificam o tamanho default da fonte do elemento root (raiz) sendo 16px, então guarde isso no coração! Mesmo essa unidade sendo mais tranquila de se trabalhar, ela não era muito utilizada para design responsivo, o que de primeira pode soar um tanto quanto estranho...</p><p>O motivo para isso é o suporte para essa medida. O chrome e o firefox suportavam tranquilamente, assim como o Opera e o Safari, porém, antigamente grande parte dos usuários utilizavam o IE, mais específicamente o IE 8, e esse browser não lidava muito bem com os <strong>rems</strong>, isso fazia com que os desenvolvedores precisassem optar por alguma unidade diferente, em muitos casos, o próprio <strong>em</strong>.</p><p>Como disse acima, o valor base é 16px, e isso pode acabar gerando dificuldades para que encontremos alguns tamanhos padrões que costumam ser utilizados. Por exemplo, como faríamos para atingir um tamanho de <strong>10px</strong> utilizando <strong>rem</strong>? Precisamos calcular.</p><p><strong>BASE 16PX</strong></p><pre><code class="hljs css">
+10<span class="hljs-selector-tag">px</span> = 0<span class="hljs-selector-class">.625rem</span>
+12<span class="hljs-selector-tag">px</span> = 0<span class="hljs-selector-class">.75rem</span>
+14<span class="hljs-selector-tag">px</span> = 0<span class="hljs-selector-class">.875rem</span>
+16<span class="hljs-selector-tag">px</span> = 1<span class="hljs-selector-tag">rem</span>
+18<span class="hljs-selector-tag">px</span> = 1<span class="hljs-selector-class">.125rem</span>
+</code></pre><p>e assim por diante, realmente não são números muito &quot;amigáveis&quot; ou convenientes Porém, podemos lançar mão de um pequeno truque para nos ajudar (62,5%)</p><pre><code class="hljs css">
+<span class="hljs-selector-tag">html</span>{
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">62</span>,<span class="hljs-number">5%</span>;
+}
+
+<span class="hljs-selector-tag">h1</span>{
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.2rem</span>;  <span class="hljs-comment">/*equivalente a 12px*/</span>
+}
+
+<span class="hljs-selector-tag">p</span>{
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2.4rem</span>; <span class="hljs-comment">/*equivalente a 24px*/</span>
+}
+</code></pre><p>Repare que dessa forma, o valor em píxel será sempre o valor definido em <strong>rem</strong> vezes 10! Fica mais conveniente, concorda?</p><p>Apesar de parecer uma boa ideia, devemos ter cuidado com essas abordagens, uma vez que ela forçará que você reescreva todos os font-size do seu site, então tome cuidado!</p><p>Existe uma terceira visão sobre isso tudo. Essa solução utiliza px, em e rem de maneira bem definida. A ideia consiste em definir o <code>font-size</code> do elemento root em píxel, módulos utilizando rem e elementos interiores aos módulos utilizando em, facilitando a manipulação do tamanho global que naturalmente escalará o tamanho para os módulos (utilizando rem) e esses por sua vez escalarão os elementos interiores (que utilizam em e referenciam ao elemento pai). Veja um exemplo dessa abordagem. No console será mostrado o tamanho atual da fonte.</p> <script async src="//jsfiddle.net/p78usjfe/9/embed/js,html,css,result/dark/"></script> <p>Caso não consiga visualizar o jsfiddle, o link é <a
+href="https://jsfiddle.net/p78usjfe/10/" target="_blank" rel="noopener">esse</a> Perceba como a combinação dessas medidas pode ser benéfica. O limite é só sua imaginação!</p><h3>Porcentagem (%)</h3><p>Apesar de não ser uma unidade de medida, a porcentagem costuma ser bastante utilizada quando falamos de layout responsivo e fluido, por isso, não poderia deixá-la passar.</p><p>A porcentagem permite que criemos módulos que sempre vão se readaptar para ocupar a quantidade especificada. Por exemplo, se definirmos um elemento tendo um tamanho de <strong>50%</strong>, independente do dispositivo em questão, esse módulo sempre ocupará metade do espaço que lhe cabe (caso esteja dentro de algum outro elemento).</p><p>Veja o exemplo abaixo</p> <script async src="//jsfiddle.net/2yxo7puj/10/embed/js,html,css,result/dark/"></script> <p>Caso não consiga visualizar o jsfiddle, o link é <a
+href="https://jsfiddle.net/2yxo7puj/10/" target="_blank" rel="noopener">esse</a></p><p>Repare que se alterarmos o tamanho da div container, o elemento interior a ela se redimensionará de forma a sempre ocupar a porcentagem especificada no CSS!</p><p>Veja também que o slider está alterando tanto a largura quanto a altura do elemento, mas se alterarmos cada um separadamente, também funcionará! Visto esse exemplo, podemos dizer que a porcentagem tem um comportamento um tanto parecido ao nosso já conhecido <strong>em</strong>, já que ele se relaciona diretamente com o tamanho da propriedade do elemento pai.</p><p>Portanto, ao trabalharmos com a porcentagem, temos o mesmo problema que tinhamos com o <strong>em</strong>, quanto mais elementos aninhados, mais complicado será de definirmos exatamente o tamanho, por isso, tenha cuidado quando utilizá-la!</p><h3>Ex</h3><p>Talvez você nunca tenha ouvido falar dessa unidade do CSS, mas ela existe. Diferentemente da forma como a <strong>EM</strong> e a <strong>REM</strong> funcionavam, essa unidade não se relaciona com o tamanho da fonte (font-size), mas com qual fonte está sendo utilizada naquele momento (font-family), mais especificamente ao tamanho do caractere <strong>x</strong> dessa fonte em questão (x-height).</p><p>Como o browser sabe esse valor? Esse valor pode vir diretamente com a fonte, o browser pode medir o caractere em caixa baixa (lower case) e se esses dois não funcionarem, o browser estipula um valor de <strong>0.5em</strong> para <strong>1ex</strong>.  </p>
+<img
+src="https://www.alura.com.br/artigos/assets/uploads/2018/12/Untitled-3.jpg" alt="" loading="lazy" class="cosmos-image" /><p>Com isso, se quando mudamos o tamanho da fonte (depende do elemento) o <strong>em</strong> e o <strong>rem</strong> mudam, dessa vez, quando alteramos completamente a fonte, o <strong>ex</strong> mudará. O uso dessa unidade está mais presente em ajustes tipográficos, nos dando um controle mais preciso quando o padrão definido para algumas tags não se adéqua corretamente ao nosso layout.</p><h3>Ch</h3><p>Também uma unidade pouco conhecida, o <strong>ch</strong> (character unit) é definida na documentação como sendo a &quot;medida avançada&quot; da largura do caractere zero (&quot;0&quot;).</p><p>Existe uma discussão antiga onde se debateu bastante sobre essa unidade e o que realmente seria &quot;medida avançada&quot;, <a
+href="http://meyerweb.com/eric/thoughts/2012/05/15/defining-ch/" target="_blank" rel="noopener">você pode acompanhar aqui</a>. A ideia é que um elemento com, por exemplo <strong>100ch</strong> de largura poderá comportar uma string de 100 caracteres dessa determinada fonte, caso essa fonte seja monospace (todos os caracteres têm o mesmo tamanho).</p><p>É comum acharmos definições que dizem que a frase acima se aplica para qualquer fonte, porém isso está errado. Como mencionei acima, a regra de <strong>1ch = 1 caractere</strong> se aplica apenas se a fonte usada for <strong>monospace</strong> (largura fixa). Fontes com a largura variável, qualquer caractere pode ser mais largo ou menos largo que o zero (&quot;0&quot;), como podemos ver na imagem abaixo:  </p>
+<img
+src="https://www.alura.com.br/artigos/assets/uploads/2018/12/img.png" alt="" loading="lazy" class="cosmos-image" /><p>Como podemos analisar, a tipografia Courier (monospace) obedece a regra acima, porém as outras duas não! O que podemos tirar após observações é que normalmente <strong>1ch</strong> é 20% - 30% mais largo, porém isso não é uma verdade absoluta e deve ser observado para cada fonte que você deseja aplicar. Por isso, tome cuidado com o uso!</p><h3>Vw (viewport width)</h3><p>Essa medida faz parte das medidas mais atuais e do futuro do CSS. Viewport units.</p><p>Como escrito no título, <strong>vw</strong> significa viewport width, mas o que é viewport?</p><p>Viewport nada mais é que a área visível de uma página web para o seu usuário, essa viewport pode variar de acordo com o dispositivo, sendo menor em celulares e maior em desktops.</p><p>Antigamente, quando não existiam tablets e celulares capazes de acessar sites, todas as web pages eram pensadas para a tela de um computador, com tamanho fixo e design estático. Com a chegada desses dispositivos móveis, essas páginas eram grandes demais para serem exibidas nesses aparelhos, o que tornava muito difícil a navegação.</p><p>A primeira solução partiu dos browsers desses dispositivos, eles adotavam um comportamento de retirar o zoom de forma que o site inteiro coubesse na tela do aparelho,definitivamente não era o ideal, mas uma solução rápida. No HTML5, foi introduzido uma maneira para que os desenvolvedores conseguissem alterar a viewport através da <strong>tag</strong>, corrigindo esse problema de usabilidade relacionado aos dispositivos móveis, mas isso é assunto para outra postagem!</p><p>Voltando para o nosso querido <strong>vw</strong>, essa unidade se relaciona diretamente com a largura da viewport, onde <strong>1vw</strong> representa <strong>1%</strong> do tamanho da largura dessa área visível. A diferença entre <strong>vw</strong> e a <strong>%</strong> é bem semelhante a diferença entre <strong>em</strong> e <strong>rem</strong>, onde a <strong>%</strong> é relativa ao contexto local do elemento e o <strong>vw</strong> é relativo ao tamanho total da largura da viewport do usuário.</p><h3>Vh (viewport height)</h3><p>Essa unidade funciona da mesma forma que o <strong>vw</strong>, porém dessa vez, a referência será a altura e não a largura. Existem diversos exemplos práticos e interessantes de uso dessas duas unidades. Você pode ver alguns usos nesse <a
+href="https://css-tricks.com/fun-viewport-units/" target="_blank" rel="noopener">link</a>, provavelmente mais para frente postarei alguns exemplos bacanas. Me cobrem!</p><h3>Vmin (viewport minimun)</h3><p>Essa unidade também se relaciona com as dimensões da viewport, mas com um porém. Anteriormente quando vimos <strong>vh</strong> e <strong>vw</strong> precisávamos escolher se gostaríamos de nos basear na altura (vh) ou na largura (vw) da viewport.</p><p>Diferentemente das anteriores, o <strong>vmin</strong> utilizará como base a menor dimensão da viewport (altura x largura), vamos ao exemplo.</p><p>Imagine que estamos trabalhando com uma viewport de 1600px de altura e 900px de largura. Nesse caso, <strong>1vmin</strong> terá o valor de <strong>9px</strong> (1% da menor dimensão!), caso tenhamos <strong>100vmin</strong>, esse será igual a <strong>900px</strong>! Interessante né?</p><p>No caso acima, a menor dimensão foi a da largura, porém se tivéssemos 300px para altura e 1400px para largura, nosso valor de referência seria o 300px! Sempre a <strong>menor</strong> dimensão!</p><h3>Vmax (viewport maximum)</h3><p>Seguindo a mesma base lógica da unidade anterior, o <strong>vmax</strong> terá como valor de referência a maior dimensão da viewport. Ou seja, utilizando o mesmo exemplo, se tivermos 1600px de altura e 900px de largura, <strong>1vmax</strong> será equivalente a <strong>16px</strong>!</p><p>No segundo exemplo ocorrerá a mesma inversão, tendo 300px para altura e 1400px para largura, <strong>1vmax</strong> será equivalente a <strong>14px</strong>. Dessa vez sempre será a <strong>maior</strong> dimensão!</p><h2 id="alerta!!">Alerta!!</h2><p>Na versão 9.0 do IE, o <strong>vmin</strong> foi implementado com um nome diferenciado (vm) Algumas versões do IE ainda não oferecem suporte para o <strong>vmax</strong>, nas novas versões isso foi corrigido.</p><p>Algumas plataformas como o windows tendem a ser inconsistentes na maneira de como eles contam o tamanho da barra de scroll dos browsers. (diminui o viewport ou não) Sempre verifique o suporte dessas medidas, tenha sempre <a
+href="https://caniuse.com/#search=vw" target="_blank" rel="noopener">esse link</a> no cinto de utilidades.</p><h2 id="conclusao">Conclusão</h2><p>Como podemos perceber, existem várias unidades que podemos utilizar no mundo web, mas sempre surgem aquelas perguntas de quando tenho que utilizar? Qual a melhor? etc...</p><p>Não existe resposta certa nem errada para essas perguntas, infelizmente não temos uma regra de ouro para todas as situações. O uso dessas unidades depende de diversos fatores como equipe, preferência, familiaridade e assim por diante.</p><p>Entretanto, é importante que você como <strong>web developer</strong> tenha todas essas ferramentas no seu cinto de utilidades já que nunca sabemos quando precisaremos utilizar.</p><p>Definitivamente a inclusão das unidades da <strong>viewport</strong> foram positivas para a web quando estamos lidando com layout flexível, cabe a você começar a colocá-las em uso durante seu dia a dia!</p><p>No mais, espero de coração que esse post tenha agregado algum conhecimento e facilitado sua jornada rumo ao saber.</p><p>Aqui na <strong>Alura</strong> você pode se aprofundar mais no universo front-end, dê uma olhada na <a
+href="https://www.alura.com.br/formacao-front-end"><strong>formação front-end!</strong></a></p></div><link
+rel="stylesheet" href="/assets/css/block/tableOfContents.1686744881.css"><div
+class="table-of-contents">
+<span>Confira neste artigo:</span><nav><ol><li>
+<a
+href="#medidas-absolutas">
+Medidas Absolutas                </a></li><li>
+<a
+href="#medidas-relativas">
+Medidas Relativas                </a></li><li>
+<a
+href="#medidas-absolutas-no-css">
+Medidas absolutas no CSS                </a></li><li>
+<a
+href="#medidas-relativas-no-css">
+Medidas Relativas no CSS                </a></li><li>
+<a
+href="#alerta!!">
+Alerta!!                </a></li><li>
+<a
+href="#conclusao">
+Conclusão                </a></li></ol></nav></div></div><div
+class="cosmos-author-sobre">
+<img
+loading="lazy" class="cosmos-author-img" src="https://www.gravatar.com/avatar/f31703811c670676e826bad4c6afcabe.png?r=PG&size=200x200&date=2023-08-02&d=https%3A%2F%2Fcursos.alura.com.br%2Fassets%2Fimages%2Fforum%2Favatar_p.png" alt="Paulo Scalercio" width="150" height="150"><div
+class="cosmos-author-txt"><div
+class="cosmos-author-name">Paulo Scalercio</div><p>Atualmente trabalhando com foco em bibliotecas/frameworks Javascript. Entusiasta de novas tecnologias e soluções que facilitam a vida das pessoas</p></div></div><nav
+class="cosmos__navigation">
+<a
+href="alterando-css-com-javascript" class="cosmos__navigation-link --previous"><div
+class="cosmos__navigation-item"><div
+class="cosmos__navigation-label">
+<span
+class="cosmos__navigation-decoration"></span>
+<span
+class="cosmos__navigation-description">Artigo Anterior</span></div>
+<strong> Alterando CSS com JavaScript </strong></div>
+</a>
+<a
+href="trabalhando-com-datas-em-javascript" class="cosmos__navigation-link --next"><div
+class="cosmos__navigation-item"><div
+class="cosmos__navigation-label">
+<span
+class="cosmos__navigation-decoration"></span>
+<span
+class="cosmos__navigation-description">Próximo Artigo</span></div>
+<strong
+class="cosmos__navigation-item-title" > Trabalhando com datas em JavaScript  </strong></div>
+</a></nav><div
+class="cosmos-related-articles"><h2 class="cosmos-related-articles-title">Leia também:</h2><ul
+class="cosmos-related-articles-list"><li><a
+href="/artigos/melhorando-capa-de-um-canal-no-youtube">Melhorando a capa de um canal no Youtube </a><li><a
+href="/artigos/definindo-dimensao-ideal-para-o-layout-meu-site">Definindo a dimensão ideal para o layout do meu site </a><li><a
+href="/artigos/utilizando-decupagem-nos-seus-projetos-de-video">Utilizando a decupagem nos seus projetos de video </a><li><a
+href="/artigos/por-que-usar-web-safe-fonts-e-uma-boa-ideia">Por que usar Web Safe Fonts é uma boa ideia? </a><li><a
+href="/artigos/quando-usar-carrossel-em-um-site">Quando usar carrossel em um site? </a><li><a
+href="/artigos/criando-layouts-com-css-grid-layout">Criando Layouts com CSS Grid Layout</a><li><a
+href="/artigos/como-fazer-grids-e-a-responsividade-na-web">CSS: Grids e tabelas com responsividade na Web</a></ul></div></article></section><div
+class="cosmos-other-files"><div
+class="container --container-banner-flex"><div
+class="categories-artigos" style="background:#6bd1ff;">
+<svg
+class="categories-artigos-icon" style="fill:#ffffff" xmlns:xlink="http://www.w3.org/1999/xlink">
+<use
+xlink:href="/svg,1687868842/categorias#icon-categorias-front-end" />
+</svg></div><p
+class="cosmos-other-files-text">Veja outros artigos sobre <a
+href="/artigos/front-end" style="color:#6bd1ff">Front-end</a></p></div></div><div
+class="cosmos-color"><div
+class="cosmos --newsletter-spacing"><link
+rel="stylesheet" href="/assets/css/block/subscribeNewsletterCard.1686744881.css"><div
+class="subscribeNewsletterCard-container"><section
+class="subscribeNewsletterCard-wrapper"><div
+class="subscribeNewsletterCard-decoration"></div><div
+class="subscribeNewsletterCard-busca-box container"><div
+class="subscribeNewsletterCard-box-texto"><p
+class="subscribeNewsletterCard-texto-bold">Quer mergulhar em tecnologia e aprendizagem?</p><p
+class="subscribeNewsletterCard-texto-normal">Receba a newsletter que o nosso CEO escreve pessoalmente,
+com insights do mercado de trabalho, ciência e desenvolvimento de software</p></div><form
+id="subscribeNewsletterCard__activecampaign" class="subscribeNewsletterCard-form" action="/api/activecampaign" method="POST">
+<input
+type="hidden" name="list" value="14">
+<input
+type="hidden" name="retorno" value="/newsletter-cadastrado">
+<input
+class="activecampaign-input subscribeNewsletterCard-input" id="activecampaing-email" type="email" placeholder="Escreva seu email" name="email" required>
+<button
+class="activecampaign-button subscribeNewsletterCard-button" type="submit">Me inscreva</button></form></div></section></div> <script>(function() {
+            function criaCampo(nome, valor, form) {
+                if (valor === null) return;
+
+                var input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = nome;
+                input.value = valor;
+
+                form.appendChild(input);
+            }
+
+            function param(name) {
+                var url = location.href;
+                name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+                var regexS = "[\\?&]"+name+"=([^&#]*)";
+                var regex = new RegExp( regexS );
+                var results = regex.exec( url );
+                return results == null ? null : results[1];
+            }
+
+            function showNewsletterError() {
+                document.querySelector('.newsletter-message-error').classList.remove('newsletter-message-error--disabled');
+            }
+
+            function valida() {
+                var isValid = true;
+                var inputList = document.querySelector('#subscribeNewsletterCard__activecampaign')['list'];
+                var inputEmail = document.querySelector('#subscribeNewsletterCard__activecampaign')['email'];
+
+                isValid = validaEmail(inputEmail.value) && validaList(inputList.value);
+
+                if(!isValid) {
+                    showNewsletterError();
+                }
+
+                return isValid;
+            }
+
+            function validaList(list) {
+                return list != '-1';
+            }
+
+            function validaEmail(email) {
+                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(email);
+            }
+
+            var form = document.querySelector('#subscribeNewsletterCard__activecampaign');
+            if(!form) return;
+
+            criaCampo('utm_source', param('utm_source'), form);
+            criaCampo('utm_campaign', param('utm_campaign'), form);
+            criaCampo('utm_medium', param('utm_medium'), form);
+            criaCampo('utm_term', param('utm_term'), form);
+            criaCampo('utm_content', param('utm_content'), form);
+            criaCampo('full_url', location.href, form);
+            criaCampo('user_agent', navigator.userAgent, form);
+            criaCampo('referral', document.referrer, form);
+
+            form.onsubmit = valida;
+
+        })();</script> </div></div></section><link
+rel="stylesheet" href="/assets/css/block/footer.1686744881.css"><footer
+class="footer"><div
+class="container"><div
+class="footer-info flex-row"><div
+class="footer-logos">
+<a
+class="footer-logos-home" gtm-data='footer_primeira_secao_050' href="/">
+<img
+src="/assets/img/home/alura-logo.1686744881.svg" alt="Alura" class="footer-logo" loading="lazy">
+</a><p
+class="footer-navegue-lista-link --description">
+<span
+class="footer-empresa-item">AOVS Sistemas de Informática S.A</span>
+<span
+class="footer-empresa-item">CNPJ 05.555.382/0001-33</span></p></div><div
+class="footer-card-hotLinks social-desktop"><h2 class="footer-card-hotLinks-titulo">Nossas redes e apps</h2><div
+class="footer-card-hotLinks-info footer-card-redes">
+<a
+href="https://www.youtube.com/alura" gtm-data='footer_primeira_secao_065' class="footer-card-hotLinks-link"
+target="_blank" rel="noopener" title="YouTube da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-youtube">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-youtube" />
+</svg>
+<span>YouTube</span>
+</a>
+<a
+href="https://www.facebook.com/AluraCursosOnline/" gtm-data='footer_primeira_secao_066'
+class="footer-card-hotLinks-link" target="_blank" rel="noopener" title="Facebook da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-facebook">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-facebook" />
+</svg>
+<span>Facebook</span>
+</a>
+<a
+href="https://twitter.com/aluraonline" gtm-data='footer_primeira_secao_067' class="footer-card-hotLinks-link"
+target="_blank" rel="noopener" title="Twitter da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-twitter">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-twitter" />
+</svg>
+<span>Twitter</span>
+</a>
+<a
+href="https://instagram.com/aluraonline" class="footer-card-hotLinks-link" gtm-data='footer_primeira_secao_073'
+target="_blank" rel="noopener" title="Instagram da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-instagram">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-instagram" />
+</svg>
+<span>Instagram</span>
+</a>
+<a
+href="https://play.google.com/store/apps/details?id=br.com.alura.mobi&hl=pt_BR"
+gtm-data='footer_primeira_secao_069' class="footer-card-hotLinks-link" target="_blank" rel="noopener"
+title="Baixar na Google Play Store">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-mobile">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-googleplay" />
+</svg>
+<span>Google Play Store</span>
+</a>
+<a
+href="https://itunes.apple.com/br/app/alura-cursos-online/id1225776635" gtm-data='footer_primeira_secao_070'
+class="footer-card-hotLinks-link" target="_blank" rel="noopener" title="Baixar na AppStore">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-mobile">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-appstore" />
+</svg>
+<span>AppStore</span>
+</a>
+<a
+href="https://www.tiktok.com/@aluraonline?lang=pt-BR" gtm-data='footer_primeira_secao_071' class="footer-card-hotLinks-link"
+target="_blank" rel="noopener" title="TikTok da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-youtube">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-tiktok" />
+</svg>
+<span>TikTok</span>
+</a></div></div><div
+class="footer-card-hotLinks social-mobile"><h2 class="footer-card-hotLinks-titulo">Nossas redes e apps</h2><div
+class="footer-card-hotLinks-info footer-card-redes">
+<a
+href="https://www.youtube.com/alura" gtm-data='footer_primeira_secao_065' class="footer-card-hotLinks-link"
+target="_blank" rel="noopener" title="YouTube da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-youtube">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-youtube" />
+</svg>
+<span>YouTube</span>
+</a>
+<a
+href="https://www.facebook.com/AluraCursosOnline/" gtm-data='footer_primeira_secao_066'
+class="footer-card-hotLinks-link" target="_blank" rel="noopener" title="Facebook da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-facebook">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-facebook" />
+</svg>
+<span>Facebook</span>
+</a>
+<a
+href="https://twitter.com/aluraonline" gtm-data='footer_primeira_secao_067' class="footer-card-hotLinks-link"
+target="_blank" rel="noopener" title="Twitter da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-twitter">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-twitter" />
+</svg>
+<span>Twitter</span>
+</a>
+<a
+href="https://instagram.com/aluraonline" class="footer-card-hotLinks-link" gtm-data='footer_primeira_secao_073'
+target="_blank" rel="noopener" title="Instagram da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-instagram">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-instagram" />
+</svg>
+<span>Instagram</span>
+</a>
+<a
+href="https://play.google.com/store/apps/details?id=br.com.alura.mobi&hl=pt_BR"
+gtm-data='footer_primeira_secao_069' class="footer-card-hotLinks-link" target="_blank" rel="noopener"
+title="Baixar na Google Play Store">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-mobile">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-googleplay" />
+</svg>
+<span>Google Play Store</span>
+</a>
+<a
+href="https://itunes.apple.com/br/app/alura-cursos-online/id1225776635" gtm-data='footer_primeira_secao_070'
+class="footer-card-hotLinks-link" target="_blank" rel="noopener" title="Baixar na AppStore">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-mobile">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-appstore" />
+</svg>
+<span>AppStore</span>
+</a>
+<a
+href="https://www.tiktok.com/@aluraonline?lang=pt-BR" gtm-data='footer_primeira_secao_071' class="footer-card-hotLinks-link"
+target="_blank" rel="noopener" title="TikTok da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-youtube">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-tiktok" />
+</svg>
+<span>TikTok</span>
+</a></div></div></div><div
+class="footer-navegue"><div
+class="navegue-column"><h2 class="footer-navegacao-titulo">Institucional</h2><ul
+class="footer-navegue-lista"><li
+class="footer-navegue-lista-link"><a
+href="/sobre" gtm-data='footer_primeira_secao_063'>Sobre nós</a></li><li
+class="footer-navegue-lista-link"><a
+href="https://grupoalura.gupy.io">Trabalhe conosco</a></li><li
+class="footer-navegue-lista-link"><a
+href="https://www.alura.com.br/empresas">Para
+Empresas</a></li><li
+class="footer-navegue-lista-link"><a
+href="/escolas">Para Escolas</a></li><li
+class="footer-navegue-lista-link"><a
+href="/politica-de-privacidade"
+gtm-data='footer_primeira_secao_061'>Política de Privacidade</a></li><li
+class="footer-navegue-lista-link"><a
+href="/compromisso-de-integridade">Compromisso de Integridade</a></li><li
+class="footer-navegue-lista-link"><a
+href="/termos-de-uso" gtm-data='footer_primeira_secao_062'>Termos
+de
+Uso</a></li><li
+class="footer-navegue-lista-link"><a
+href="https://status.alura.com.br/">Status</a></li></ul></div><div
+class="navegue-column"><h2 class="footer-navegacao-titulo">A Alura</h2><ul
+class="footer-navegue-lista"><li
+class="footer-navegue-lista-link"><a
+href="/como-funciona" gtm-data='footer_primeira_secao_064'>Como
+Funciona</a></li><li
+class="footer-navegue-lista-link"><a
+href="/cursos-online-tecnologia"
+gtm-data='footer_primeira_secao_054'>Todos os cursos</a></li><li
+class="footer-navegue-lista-link"><a
+href="/depoimentos"
+gtm-data="footer_primeira_secao_069">Depoimentos</a></li><li
+class="footer-navegue-lista-link"><a
+href="/instrutores"
+gtm-data="footer_primeira_secao_061">Instrutores(as)</a></li><li
+class="footer-navegue-lista-link"><a
+href="/dev-em-t" gtm-data='footer_primeira_secao_065'>Dev em
+&lt;T&gt;</a></li></ul></div><div
+class="navegue-column"><h2 class="footer-navegacao-titulo">Conteúdos</h2><ul
+class="footer-navegue-lista"><li
+class="footer-navegue-lista-link"><a
+href="/cases">Alura Cases</a></li><li
+class="footer-navegue-lista-link"><a
+href="/imersao" gtm-data="footer_primeira_secao_068">Imersões</a></li><li
+class="footer-navegue-lista-link"><a
+href="/artigos" gtm-data='footer_primeira_secao_058'>Artigos</a></li><li
+class="footer-navegue-lista-link"><a
+href="/podcasts">Podcasts</a></li><li
+class="footer-navegue-lista-link"><a
+href="/empresas/artigos">Artigos de educação <br> corporativa</a></li></ul></div><div
+class="navegue-column"><h2 class="footer-navegacao-titulo">Fale Conosco</h2><ul
+class="footer-navegue-lista"><li
+class="footer-navegue-lista-link"><a
+href="https://www.alura.com.br/contato">Email e telefone</a></li><li
+class="footer-navegue-lista-link"><a
+href="https://suporte.alura.com.br/"
+gtm-data='footer_primeira_secao_066'>Perguntas frequentes</a></li></ul></div><div
+class="footer-column footer-column-cards"><div
+class="newsletter"><h2 class="newsletter-titulo">Novidades e Lançamentos</h2><div
+class="hubspot-form newsletter-form"> <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js?pre=1"></script> <script>hbspt.forms.create({
+                region: "na1",
+                portalId: "21748317",
+                formId: "39a8f8bd-d48f-4f45-8ed4-d26366176d39"
+              });</script> </div></div></div></div><div
+class="parceiros flex-column"><h2 class="footer-navegacao-titulo">Parceiros</h2><ul
+class="footer-navegue-lista flex-row"><li
+class="footer-navegue-lista-link --description footer-column-cards">
+<img
+src="/assets/img/footer/scale-up-endeavor.1686744881.png" alt="Programa de aceleração Scale-Up Endeavor"
+class="footer-navegue-lista__image" loading="lazy">
+<span
+class="footer-navegue-lista-link --description --partners">Nós, da Alura, somos uma das Scale-Ups
+selecionadas pela Endeavor, programa de aceleração das empresas que
+mais crescem no país.</span></li><li
+class="footer-navegue-lista-link --description footer-column-cards">
+<img
+src="/assets/img/footer/google-alumni-2021.1686744881.png" alt="Growth Academy 2021 do Google For Startups"
+class="footer-navegue-lista__image" loading="lazy">
+<span
+class="footer-navegue-lista-link --description --partners">Fomos uma das 7 startups selecionadas pelo
+Google For Startups a participar do programa Growth Academy em
+2021.</span></li></ul></div></div></footer><section
+class="footer_categorias-formacoes"><div
+class="container"><div
+class="footer_categorias_wrapper"><h2 class="footer_categorias_title">Cursos</h2><div
+class="footer_categorias_categorias footer-navegue-lista-link"><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-programacao">Cursos de Programação</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-programacao/logica">
+Lógica            </a>
+|                        <a
+href="/cursos-online-programacao/python">
+Python            </a>
+|                        <a
+href="/cursos-online-programacao/php">
+PHP            </a>
+|                        <a
+href="/cursos-online-programacao/java">
+Java            </a>
+|                        <a
+href="/cursos-online-programacao/dotnet">
+.NET            </a>
+|                        <a
+href="/cursos-online-programacao/node-js">
+Node JS            </a>
+|                        <a
+href="/cursos-online-programacao/linguagem-c">
+C            </a>
+|                        <a
+href="/cursos-online-programacao/computacao">
+Computação            </a>
+|                        <a
+href="/cursos-online-programacao/jogos">
+Jogos            </a>
+|                        <a
+href="/cursos-online-programacao/internet-das-coisas">
+IoT            </a></div></div><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-front-end">Cursos de Front-end</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-front-end/front-end">
+HTML, CSS            </a>
+|                        <a
+href="/cursos-online-front-end/reactjs">
+React            </a>
+|                        <a
+href="/cursos-online-front-end/angular">
+Angular            </a>
+|                        <a
+href="/cursos-online-front-end/javascript">
+JavaScript            </a>
+|                        <a
+href="/cursos-online-front-end/jquery">
+jQuery            </a></div></div><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-data-science">Cursos de Data Science</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-data-science/data-science">
+Ciência de dados            </a>
+|                        <a
+href="/cursos-online-data-science/business-intelligence">
+BI            </a>
+|                        <a
+href="/cursos-online-data-science/sql">
+SQL e Banco de Dados            </a>
+|                        <a
+href="/cursos-online-data-science/excel">
+Excel            </a>
+|                        <a
+href="/cursos-online-data-science/machine-learning">
+Machine Learning            </a>
+|                        <a
+href="/cursos-online-data-science/nosql">
+NoSQL            </a>
+|                        <a
+href="/cursos-online-data-science/estatistica">
+Estatística            </a></div></div><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-inteligencia-artificial">Cursos de Inteligência Artificial</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-inteligencia-artificial/ia-para-programacao">
+IA para Programação            </a>
+|                        <a
+href="/cursos-online-inteligencia-artificial/ia-para-dados">
+IA para Dados            </a></div></div><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-devops">Cursos de DevOps</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-devops/aws">
+AWS            </a>
+|                        <a
+href="/cursos-online-devops/azure">
+Azure            </a>
+|                        <a
+href="/cursos-online-devops/containers">
+Docker            </a>
+|                        <a
+href="/cursos-online-devops/seguranca">
+Segurança            </a>
+|                        <a
+href="/cursos-online-devops/infraestrutura-como-codigo">
+IaC            </a>
+|                        <a
+href="/cursos-online-devops/linux-comandos-e-processos">
+Linux            </a></div></div><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-design-ux">Cursos de UX & Design</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-design-ux/ux">
+Usabilidade e UX            </a>
+|                        <a
+href="/cursos-online-design-ux/video">
+Vídeo e Motion            </a>
+|                        <a
+href="/cursos-online-design-ux/3d">
+3D            </a></div></div><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-mobile">Cursos de Mobile</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-mobile/react-native">
+React Native            </a>
+|                        <a
+href="/cursos-online-mobile/flutter-mobile">
+Flutter            </a>
+|                        <a
+href="/cursos-online-mobile/ios">
+iOS e Swift            </a>
+|                        <a
+href="/cursos-online-mobile/android">
+Android, Kotlin            </a>
+|                        <a
+href="/cursos-online-mobile/jogos">
+Jogos            </a></div></div><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-inovacao-gestao">Cursos de Inovação & Gestão</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-inovacao-gestao/agilidade">
+Métodos Ágeis            </a>
+|                        <a
+href="/cursos-online-inovacao-gestao/softskills-carreira">
+Softskills            </a>
+|                        <a
+href="/cursos-online-inovacao-gestao/gestao-corporativa">
+Liderança e Gestão            </a>
+|                        <a
+href="/cursos-online-inovacao-gestao/startup-empreendedorismo">
+Startups            </a>
+|                        <a
+href="/cursos-online-inovacao-gestao/vendas">
+Vendas            </a></div></div></div></div></div></section><style>@media not all and (min-width: 1024px) {
+			.grupoCaelum {
+				display: none;
+			}
+		}
+
+		.grupoCaelum {
+			background: #fff;
+			height: 400px;
+			border-top: 1px solid #EBEBEE;
+		}
+
+		.grupoCaelum .container {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			padding-top: 0;
+			padding-bottom: 0;
+			height: 100%;
+		}
+
+		.grupoCaelum-list {
+			display: flex;
+			list-style: none;
+			width: 80%;
+			justify-content: space-between;
+			align-items: flex-start;
+			margin-top: 1.25rem;
+		}
+
+		.grupoCaelum-title {
+			width: 20%;
+		}
+
+		.grupoCaelum-column {
+			display: inline-block;
+			padding-left: 1.1875rem;
+			width: 240px;
+			height: 350px;
+			min-width: 160px;
+		}
+
+		.grupoCaelum-column-title {
+			font-size: 0.625rem;
+			color: #d7e0e5;
+			text-transform: uppercase;
+			font-weight: 600;
+			margin-bottom: 1.1875rem;
+		}
+
+		.grupoCaelum-column-list {
+			list-style: none;
+		}
+
+		.column-item-title {
+			font-size: 0.6875rem;
+			text-align: center;
+			vertical-align: middle;
+			display: inline-block;
+			margin-left: 0.375rem;
+		}
+
+		.grupoCaelum-column:not(:first-child) {
+			border-left: solid 1px #e3e9ed;
+		}
+
+		.grupoCaelum-title {
+			display: inline-block;
+			text-decoration: none;
+			color: #657176;
+			letter-spacing: normal;
+			font-size: 1.125rem;
+			margin-top: 3.375rem;
+		}
+
+		.column-item-logo {
+			width: 30px;
+			height: 30px;
+			vertical-align: middle;
+			display: inline-block;
+		}
+
+		.column-item {
+			margin-bottom: 1.0625rem;
+		}
+
+		.column-item a {
+			text-decoration: none;
+			color: #657176;
+			display: flex;
+			align-items: center;
+		}</style><footer
+class="caelum-footer" id="caelum-footer"><div
+class="grupoCaelum"><div
+class="container"><p
+class="grupoCaelum-title">Alura</p><ul
+class="grupoCaelum-list"><li
+class="grupoCaelum-column"><p
+class="grupoCaelum-column-title">Educação em Tecnologia</p><ul
+class="grupoCaelum-column-list"><li
+class="column-item">
+<a
+target="_blank" href="https://www.fiap.com.br/">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/fiap.1686744881.svg" alt="logo fiap" loading="lazy" />
+<span
+class="column-item-title">FIAP</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://www.casadocodigo.com.br">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/cdc.1686744881.svg" alt="logo casa do codigo" loading="lazy" />
+<span
+class="column-item-title">Casa do Código</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" style="fill: #657176" href="https://www.cursospm3.com.br/">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/pm3.1686744881.svg" alt="logo pm3" loading="lazy" />
+<span
+class="column-item-title">PM3 - Cursos de Produto</span>
+</a></li></ul></li><li
+class="grupoCaelum-column"><p
+class="grupoCaelum-column-title">Mais Alura</p><ul
+class="grupoCaelum-column-list"><li
+class="column-item">
+<a
+target="_blank" href="https://www.alurastart.com.br">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/alurastart.1686744881.svg" alt="logo alura start" loading="lazy" />
+<span
+class="column-item-title">Alura Start</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://www.aluralingua.com.br">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/aluralingua.1686744881.svg" alt="logo alura lingua" loading="lazy" />
+<span
+class="column-item-title">Alura Língua</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://www.alura.com.br/empresas">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/alura-empresas.1686744881.svg" alt="logo alura para empresas" loading="lazy" />
+<span
+class="column-item-title">Alura Para Empresas</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://www.aluracursos.com">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/alura.1686744881.svg" alt="logo alura latam" loading="lazy" />
+<span
+class="column-item-title">Alura LATAM</span>
+</a></li></ul></li><li
+class="grupoCaelum-column"><p
+class="grupoCaelum-column-title">Comunidade</p><ul
+class="grupoCaelum-column-list"><li
+class="column-item">
+<a
+target="_blank" href="
+https://techguide.sh/								">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/techguide.1686744881.svg" alt="logo tech guide" loading="lazy" />
+<span
+class="column-item-title">Tech Guide</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://7daysofcode.io/">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/7days.1686744881.svg" alt="logo 7 days of code"loading="lazy" />
+<span
+class="column-item-title">7 days of code</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://hipsters.jobs">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/hipstersjobs.1686744881.svg" alt="logo Hipsters ponto Jobs" loading="lazy" />
+<span
+class="column-item-title">Hipsters ponto Jobs</span>
+</a></li></ul></li><li
+class="grupoCaelum-column"><p
+class="grupoCaelum-column-title">Podcasts</p><ul
+class="grupoCaelum-column-list"><li
+class="column-item">
+<a
+target="_blank" href="https://hipsters.tech">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/hipsterstech.1686744881.svg" alt="logo Hipsters ponto Tech" loading="lazy" />
+<span
+class="column-item-title">Hipsters ponto Tech</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://www.devsemfronteiras.tech/">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/devsemfronteiras.1686744881.svg" alt="logo Dev sem fronteiras" loading="lazy" />
+<span
+class="column-item-title">Dev sem Fronteiras</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://layerspontotech.com.br">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/layerstech.1686744881.svg" alt="logo Layers ponto Tech" loading="lazy" />
+<span
+class="column-item-title">Layers ponto Tech</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://scuba.dev.br">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/scubadev.1686744881.svg" alt="logo Scuba Dev" loading="lazy" />
+<span
+class="column-item-title">Scuba Dev</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://bolhadev.tech/">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/bolhadev.1686744881.svg" alt="logo bolha dev" loading="lazy" />
+<span
+class="column-item-title">Bolha Dev</span>
+</a></li></ul></li></ul></div></div></footer> <script>(function(){
+    var match = location.pathname.match(/\/(bf-|black-?friday\/)([^\/]+)/);
+    if (match != null) {
+        var links = document.querySelectorAll('a[href]');
+        for (var i = 0; i < links.length; i++) {
+            var href = links[i].getAttribute('href');
+            if (href[0] === '/') {
+                links[i].setAttribute('href', '/bf-' + match[2] + href);
+            }
+        }
+    }
+})();</script> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" async></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/highlight.min.js"></script> <script>hljs.initHighlightingOnLoad();</script> <script src="/assets/js/lib/svg4everybody.min.1686744882.js" async></script> <script src="/assets/js/footer/footer.1686744882.js" defer></script> <script src="/assets/js/header/menu.1686744882.js" defer></script> <script src="/assets/js/header/busca.1687365821.js" defer></script> <script src="/assets/js/header/cursos.1686744882.js" defer></script> <script src="/assets/js/header/menuMobile.1687365821.js" defer></script> <script src="/assets/js/detect.1686744882.js" async></script> <script src="/assets/js/video.1686744882.js" defer></script> <script src="/assets/js/countdown.1686744882.js" async></script> <script src="/assets/js/header/cookie-influencer.1690566811.js" async></script> <script src="/assets/js/trackers.1686744882.js" async></script> <script src="/assets/js/courseIconFallback.1686744882.js" defer></script> <script type="text/javascript">_linkedin_partner_id = "465017";
+			window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+			window._linkedin_data_partner_ids.push(_linkedin_partner_id);</script> <script type="text/javascript">(function(){var s = document.getElementsByTagName("script")[0];
+			var b = document.createElement("script");
+			b.type = "text/javascript";b.async = true;
+			b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+			s.parentNode.insertBefore(b, s);})();</script> <noscript>
+<img
+height="1" width="1" style="display:none;" alt=""
+src="https://dc.ads.linkedin.com/collect/?pid=465017&fmt=gif" />
+</noscript> <script src="/assets/js/artigos/table-of-contents.1686744882.js" async></script> <script src="/assets/js/artigos/tracker-post-read.1690557002.js" async></script> <script src="https://static.codepen.io/assets/embed/ei.js" async></script> <script src="/assets/js/artigos/iframe-loader.1690557002.js" async></script> </body></html>

@@ -1,0 +1,1255 @@
+<!DOCTYPE html><html
+lang="pt-BR"><head><meta
+charset="UTF-8"><meta
+name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0"><title>Reset CSS: O que é, Exemplos, Como Criar e Utilizar | Alura</title><meta
+name="description" content="Confira neste artigo o que é o Reset CSS, para que serve e como usar essa técnica bastante utilizada por pesssoas desenvolvedoras Front-End."><link
+rel="canonical" href="https://www.alura.com.br/artigos/o-que-e-reset-css"><link
+rel="icon" href="/assets/favicon.1686744881.ico" /><link
+rel="preconnect" href="https://fonts.googleapis.com"><link
+rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Archivo+Black&display=swap" rel="stylesheet"><link
+rel="stylesheet" href="/bundle,base/_reset,base/base,base/buttons,base/colors-apostilas,base/colors,base/titulos.1690823411.css"><link
+rel="stylesheet" href="/bundle,artigos/artigos,artigos/iframe.1690557002.css"><link
+rel="stylesheet" href="/bundle,cosmos/cosmos-article-list,cosmos/cosmos-content,cosmos/cosmos-header,cosmos/cosmos-media,cosmos/cosmos-related,cosmos/cosmos-webseries,cosmos/cosmos,cosmos/cosmosPodcast,cosmos/highlight.1686744883.css"><meta
+property="og:locale" content="pt_BR"><meta
+property="og:description" content="Confira neste artigo o que é o Reset CSS, para que serve e como usar essa técnica bastante utilizada por pesssoas desenvolvedoras Front-End."><meta
+property="og:title" content="Reset CSS: O que é, Exemplos, Como Criar e Utilizar | Alura"><meta
+property="og:site_name" content="Alura"><meta
+property="og:url" content="https://www.alura.com.br/artigos/o-que-e-reset-css?_gl=1*172pnlm*_ga*MzA2NDUyNDcyLjE2NjkwNTc5ODg.*_ga_59FP0KYKSM*MTY5MDgyNjU0NS4yMjguMS4xNjkwODI4MjgwLjAuMC4w*_fplc*MkZld1QyV2puR0Rndzc0N2xjUUkzTTBPM2VLREJhQVRkNGQ3VHc1SzBKbTU2b0V4U2RTd0pRQ2VWZWF6eiUyRmo1UENBNndtVFdzTlRkYktrWk9oNTJuWlNpUDJ4QktzNVZsckljJTJCUyUyQkc2eTQzSDFJZTlVSWJwV0pQSkx1d0ZRJTNEJTNE"><meta
+property="og:image" content="https://www.alura.com.br/artigos/assets/o-que-e-reset-css/fundo-card.jpg"><meta
+property="og:image:alt" content="Alura logo"><meta
+property="fb:app_id" content="140078819399376"><meta
+property="og:type" content="website"><meta
+name="twitter:card" content="summary_large_image"><meta
+name="theme-color" content="#2A7AE4"><meta
+name="google-site-verification" content="e-ieHUO1JHyNyCZv0Z8Nu-R3ECPykHiNHHEhPdF35Bk" /><meta
+name="thumbnail" content="https://www.alura.com.br/artigos/assets/o-que-e-reset-css/fundo-card.jpg"> <script>;
+                (function(w, d, s, l, i) {
+                    w[l] = w[l] || [];
+                    w[l].push({
+                        'gtm.start': new Date().getTime(),
+                        event: 'gtm.js'
+                    });
+                    var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                    j.async = true;
+                    j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                    f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayer', 'GTM-TN542JN');</script> <script>;
+                (function(w, d, s, l, i) {
+                    w[l] = w[l] || [];
+                    w[l].push({
+                        'gtm.start': new Date().getTime(),
+                        event: 'gtm.js'
+                    });
+                    var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                    j.async = true;
+                    j.src =
+                        'https://load.stape.alura.com.br/qukryqvi.js?id=' + i + dl;
+                    f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayerAlura', 'GTM-NTLWWLR');</script> <script>;
+                (function(w, d, s, l, i) {
+                    w[l] = w[l] || [];
+                    w[l].push({
+                        'gtm.start': new Date().getTime(),
+                        event: 'gtm.js'
+                    });
+                    var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                    j.async = true;
+                    j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                    f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayerAluraTest', 'GTM-5293HPN');</script>  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-980051072"></script> <script>window.dataLayer = window.dataLayer || [];
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', 'AW-980051072');</script> <script>! function(w, d, t) {
+                    w.TiktokAnalyticsObject = t;
+                    var ttq = w[t] = w[t] || [];
+                    ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"], ttq.setAndDefer = function(t, e) {
+                        t[e] = function() {
+                            t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+                        }
+                    };
+                    for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
+                    ttq.instance = function(t) {
+                        for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) ttq.setAndDefer(e, ttq.methods[n]);
+                        return e
+                    }, ttq.load = function(e, n) {
+                        var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
+                        ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = i, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {};
+                        n = document.createElement("script");
+                        n.type = "text/javascript", n.async = !0, n.src = i + "?sdkid=" + e + "&lib=" + t;
+                        e = document.getElementsByTagName("script")[0];
+                        e.parentNode.insertBefore(n, e)
+                    };
+                    ttq.load("CASS65BC77UAKBUROQ2G");
+                    ttq.page();
+                }(window, document, 'ttq');</script> <script async src='//www.google-analytics.com/analytics.js'></script> <script>var userId = (document.cookie.match('alura.userId=([^;]+)') || [null, null])[1];
+                window.ga = window.ga || function() {
+                    (ga.q = ga.q || []).push(arguments)
+                };
+                ga.l = +new Date;
+
+                                    ga(
+                        'create',
+                        'UA-42101548-1',
+                        'alura.com.br',
+                        'tracker0', {
+                            'siteSpeedSampleRate': 50
+                        }
+                    );
+
+                    if (userId) ga('tracker0.set', 'userId', userId);
+
+                    ga('tracker0.require', 'displayfeatures');
+                    ga('tracker0.send', 'pageview');
+                                    ga(
+                        'create',
+                        'UA-42101548-9',
+                        'alura.com.br',
+                        'tracker1', {
+                            'siteSpeedSampleRate': 50
+                        }
+                    );
+
+                    if (userId) ga('tracker1.set', 'userId', userId);
+
+                    ga('tracker1.require', 'displayfeatures');
+                    ga('tracker1.send', 'pageview');</script> </head><body
+class=""> <script async src="/assets/js/avatarOnError.1686744882.js"></script> <noscript><iframe
+src="https://www.googletagmanager.com/ns.html?id=GTM-TN542JN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe
+src="https://www.googletagmanager.com/ns.html?id=GTM-NTLWWLR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe
+src="https://www.googletagmanager.com/ns.html?id=GTM-5293HPN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>! function(f, b, e, v, n, t, s) {
+                        if (f.fbq) return;
+                        n = f.fbq = function() {
+                            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                        };
+                        if (!f._fbq) f._fbq = n;
+                        n.push = n;
+                        n.loaded = !0;
+                        n.version = '2.0';
+                        n.queue = [];
+                        t = b.createElement(e);
+                        t.async = !0;
+                        t.src = v;
+                        s = b.getElementsByTagName(e)[0];
+                        s.parentNode.insertBefore(t, s)
+                    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+                    fbq('init', '1067810189950610');
+                    fbq('track', 'PageView');</script>  <script type="application/ld+json">{
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://www.alura.com.br",
+          "name": "Alura"
+        }
+      }   
+              ,{
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://www.alura.com.br/artigos",
+            "name": "Artigos"
+          }
+        }
+              ,{
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@id": "https://www.alura.com.br/artigos/front-end",
+            "name": "Front-end"
+          }
+        }
+              ,{
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@id": "https://www.alura.com.br/artigos/o-que-e-reset-css",
+            "name": "Reset CSS: O que é, Exemplos, Como Criar e Utilizar"
+          }
+        }
+            ]
+    }</script> <link
+rel="stylesheet" href="/assets/css/block/header.1687365821.css"><header
+class="header internalPage"><div
+class="container"><nav
+class="header__nav">
+<a
+href="/" class="header__nav--logo">
+<img
+alt="Alura" src="/assets/img/home/alura-logo.1686744881.svg">
+</a><div
+class="header__nav--busca header-barraBusca"><form
+action="/busca" class="header__nav--busca-form">
+<input
+type="search" class="header__nav--busca-input" id="header-barraBusca-form-campoBusca" name="query" placeholder="O que você quer aprender?" required>
+<button
+class="header__nav--busca-submit" type="submit">
+<svg
+xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15">
+<g
+fill="none" fill-rule="evenodd" stroke="#D7F9FF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" transform="translate(1 1)">
+<path
+d="M13.637 12.86l-3.526-3.527" />
+<circle
+cx="5.667" cy="5.667" r="5.667" />
+</g>
+</svg>
+</button></form></div><div
+class="header__nav--ctas"><div
+class="header__nav--ctas-busca header-utilitario-busca" aria-label="Busca">
+<svg
+width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path
+d="M14.637 13.86L11.111 10.333" stroke="#40A5B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path
+d="M6.667 12.334C9.7968 12.334 12.334 9.7968 12.334 6.667C12.334 3.5372 9.7968 1 6.667 1C3.5372 1 1 3.5372 1 6.667C1 9.7968 3.5372 12.334 6.667 12.334Z" stroke="#40A5B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div>
+<a
+class="header__nav--ctas-entrar header__nav--link-hover" href="https://cursos.alura.com.br/loginForm?urlAfterLogin=https://cursos.alura.com.br/dashboard">Entrar</a>
+<a
+class="header__nav--ctas-matricule" href="/planos-cursos-online">Matricule-se</a></div><div
+class="header__nav--menu"><div
+class="header__nav--menu-link all-courses header__nav--link-hover">
+<span>Todos os</span>
+<span>Cursos</span></div>
+<a
+href="/formacoes" class="header__nav--menu-link header__nav--link-hover">
+<span>Nossas</span>
+<span>Formações</span>
+</a>
+<a
+href="/empresas" class="header__nav--menu-link header__nav--link-hover">
+<span>Para</span>
+<span>Empresas</span>
+</a>
+<a
+href="/dev-em-t" class="header__nav--menu-link header__nav--link-hover">
+<span>Dev</span>
+<span>em &lt;T&gt;</span>
+</a></div></nav></div><div
+class="header__nav--courses"><div
+class="container"><ul
+class="header__nav--courses-list"><li
+class="header__nav--courses-item --programacao">
+<a
+href="/cursos-online-programacao" class="header__nav--courses-item-link">
+Programação                                    <span
+style="color: #00c86f;">_</span>
+</a></li><li
+class="header__nav--courses-item --front-end">
+<a
+href="/cursos-online-front-end" class="header__nav--courses-item-link">
+Front-end                                    <span
+style="color: #6bd1ff;">_</span>
+</a></li><li
+class="header__nav--courses-item --data-science">
+<a
+href="/cursos-online-data-science" class="header__nav--courses-item-link">
+Data Science                                    <span
+style="color: #9cd33b;">_</span>
+</a></li><li
+class="header__nav--courses-item --inteligencia-artificial">
+<a
+href="/cursos-online-inteligencia-artificial" class="header__nav--courses-item-link">
+Inteligência Artificial                                    <span
+style="color: #7b71ff;">_</span>
+</a></li><li
+class="header__nav--courses-item --devops">
+<a
+href="/cursos-online-devops" class="header__nav--courses-item-link">
+DevOps                                    <span
+style="color: #f16165;">_</span>
+</a></li><li
+class="header__nav--courses-item --design-ux">
+<a
+href="/cursos-online-design-ux" class="header__nav--courses-item-link">
+UX & Design                                    <span
+style="color: #dc6ebe;">_</span>
+</a></li><li
+class="header__nav--courses-item --mobile">
+<a
+href="/cursos-online-mobile" class="header__nav--courses-item-link">
+Mobile                                    <span
+style="color: #ffba05;">_</span>
+</a></li><li
+class="header__nav--courses-item --inovacao-gestao">
+<a
+href="/cursos-online-inovacao-gestao" class="header__nav--courses-item-link">
+Inovação & Gestão                                    <span
+style="color: #ff8c2a;">_</span>
+</a></li></ul></div></div></header><section
+class="cosmos-container-color"><div
+class="cosmos-color"><div
+class="cosmos artigos-topo"><div
+class="container">
+<a
+href="/artigos" class="artigos-topo__label">
+Artigos
+</a>
+&gt;
+<a
+class="artigos-topo__label --artigos-strong" href="/artigos/front-end" style="color:#6bd1ff">Front-end</a></div></div></div> <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.alura.com.br/artigos/o-que-e-reset-css"
+  },
+  "headline": "Reset CSS: O que é, Exemplos, Como Criar e Utilizar",
+  "description": "Confira neste artigo o que é o Reset CSS, para que serve e como usar essa técnica bastante utilizada por pesssoas desenvolvedoras Front-End.",
+  "image": "https://www.alura.com.br/artigos/assets/o-que-e-reset-css/fundo-card.jpg",
+  "datePublished": "2021-02-06",
+    "dateModified": "2023-06-20",
+      "author": {
+        "@type": "Organization",
+    "name": "Alura",
+    "url": "https://www.alura.com.br",
+    "logo": {
+      "@type": "ImageObject",
+    "url": "https://www.alura.com.br/assets/api/share/alura.jpg",
+      "height" : 60, 
+      "width" : 600,
+      "sameAs":["https://www.youtube.com/alura",
+               "https://www.facebook.com/AluraCursosOnline/",
+               "https://twitter.com/aluraonline",
+               "https://www.instagram.com/aluraonline/",
+               "https://play.google.com/store/apps/details?id=br.com.alura.mobi&hl=pt_BR&gl=US",
+               "https://apps.apple.com/br/app/alura-cursos-online/id1225776635"],
+      "contactPoint":{
+      "@type":"ContactPoint",
+     "email":"contato@alura.com.br",
+     "contactType":"customer support"
+     }},
+   "publisher": {
+    "@type": "Organization",
+    "name": "Alura",
+    "url": "https://www.alura.com.br",
+       "reviewedBy": {
+     "@type": "Person",
+     "name": "Laís Cavalcanti",
+     "image": "https://www.gravatar.com/avatar/d53a0be2f4403ded82d3d0044816410f.png?r=PG&size=200x200&date=2023-07-31&d=https%3A%2F%2Fcursos.alura.com.br%2Fassets%2Fimages%2Fforum%2Favatar_l.png"
+   }
+     }}}</script> <section
+class="cosmos-color"><article
+class="cosmos"
+data-ga4-article-name="Reset CSS: O que é, Exemplos, Como Criar e Utilizar"
+data-ga4-article-category="Front-end"
+data-ga4-article-author="Laís Cavalcanti"
+><div
+class="cosmos-header"><h1>Reset CSS: O que é, Exemplos, Como Criar e Utilizar</h1><div
+class="cosmos-image__wrapper">
+<img
+src="https://www.alura.com.br/artigos/assets/o-que-e-reset-css/fundo-card.jpg"
+alt="Reset CSS: O que é, Exemplos, Como Criar e Utilizar"
+class="cosmos-image cosmos-banner-top"
+style="border: none; padding: 0px; width: 100%; height: 300px; object-fit: cover; max-width: none;"></div><div
+class="cosmos-header-info"><div
+class="cosmos-author">
+<img
+loading="lazy" class="cosmos-author-img" src="https://www.gravatar.com/avatar/d53a0be2f4403ded82d3d0044816410f.png?r=PG&size=200x200&date=2023-07-31&d=https%3A%2F%2Fcursos.alura.com.br%2Fassets%2Fimages%2Fforum%2Favatar_l.png" alt="Laís Cavalcanti" width="50" height="50"><div><div
+class="cosmos-author-name">Laís Cavalcanti</div>
+<time
+class="cosmos-author-date"
+datetime="2023-06-20 15:32">
+Atualizado em 20 de  Junho                                    </time></div></div><div
+class="cosmos-container-social-media"><p
+class="cosmos-text-social-media">Compartilhe</p><ul
+class="cosmos-container-flex-social-media"><li
+class="--icon-twitter">
+<a
+href="https://twitter.com/share?url=https://www.alura.com.br/artigos/o-que-e-reset-css"></a></li><li
+class="--icon-linkedin">
+<a
+href="https://linkedin.com/shareArticle?url=https://www.alura.com.br/artigos/o-que-e-reset-css"></a></li><li
+class="--icon-facebook">
+<a
+href="https://facebook.com/share.php?u=https://www.alura.com.br/artigos/o-que-e-reset-css"></a></li><li
+class="--icon-whatsapp">
+<a
+href="https://api.whatsapp.com/send?text=https://www.alura.com.br/artigos/o-que-e-reset-css"></a></li></ul></div><div
+class="cosmos-related-gruides"></div></div></div><div
+class="cosmos-header-line"></div><div
+class="article__main-content"><div
+class="cosmos-color cosmos"><p>Na <strong>Alura</strong>, faço parte da equipe do Apoio Educacional e em meio a várias dúvidas que surgem no fórum, algumas são direcionadas à prática do <strong>reset CSS</strong>. Nesse artigo, vamos juntos entender melhor como funciona essa técnica.</p><h2 id="reset-css:--o-que-e?">Reset CSS:  O que é?</h2><p>Cada navegador tem a sua apresentação por padrão e esse comportamento individualizado pode gerar conflitos de layout diante do seu projeto web.</p><p>E isso era um problema enfrentado por programadores e programadoras <strong>Front-end</strong>. Apesar de ser uma técnica *simples, chegar em consenso mínimo sobre como &quot;forçar&quot; todos os navegadores a terem o mesmo comportamento, não foi fácil.</p><p>Em 2007, o Eric Meyer (iremos falar dele mais a frente) em <a
+href="http://meyerweb.com/eric/thoughts/2007/04/18/reset-reasoning/" target="_blank" rel="noopener">seu blog</a>, levantou a discussão de como lidar com essas inconsistências dos navegadores e gerou uma grande discussão. Essas inconstâncias que os navegadores apresentam no momento de exibir ou renderizar elementos, podem ser sutis ou mais grosseiras, como, por exemplo, medidas diferentes para o margin superior e inferior em títulos ou a altura da linha padrão, o que poderá afetar profundamente as alturas dos elementos e alinhamentos.</p><h2 id="exemplos-de-como-se-comporta-o-reset-css">Exemplos de como se comporta o reset CSS</h2><p>Segue exemplos de como o reset CSS se comporta quando usado (em ambos os exemplos foram feitos no navegador Firefox):</p><h3><em>comResetCSS</em></h3>
+<img
+src="assets/o-que-e-reset-css/imagem-1.png" alt="exemplo 1 com reset css" loading="lazy" class="cosmos-image" /><h3><em>semResetCSS</em></h3>
+<img
+src="assets/o-que-e-reset-css/imagem-2.png" alt="exemplo 2 sem reset css" loading="lazy" class="cosmos-image" /><p>Conseguimos observar grandes diferenças do que o reset css pode fazer com o layout. Resetamos tags que tinham valores iniciais o que ocasionava uma pré formatação e nos retornava um estilo básico, como nas tags <em>h1</em>, <em>a</em>, <em>body</em>, etc.</p><p>A técnica do reset css é uma forma de suavizar estas diferenças e padronizar a estilização, sobrepondo a formatação original do browsers com uma folha de estilo. Assim, o reset css se tornou um arquivo quase que obrigatório em cada projeto web que tem por aí.</p><h2 id="como-criar-o-reset-css?">Como criar o Reset CSS?</h2><p>Compreendemos que para mitigarmos as formatações originais entre diferentes navegadores, precisamos selecionar todas as tags e adicionar sobre elas os resets, como margin, padding, border, etc.</p><p>Cada um pode criar o seu próprio reset css a partir da necessidade do seu projeto ou pode também utilizar algum reset pronto.. Um dos mais utilizados e conhecidos foi desenvolvido pelo Eric Meyer, no [blog] (<a
+href="https://meyerweb.com/eric/tools/css/reset/" target="_blank" rel="noopener">https://meyerweb.com/eric/tools/css/reset/</a>) ele explica um pouco sobre a técnica, como desenvolveu o seu código reset.</p><pre><code class="hljs css"><span class="hljs-comment">/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/</span>
+
+<span class="hljs-selector-tag">html</span>, <span class="hljs-selector-tag">body</span>, <span class="hljs-selector-tag">div</span>, <span class="hljs-selector-tag">span</span>, <span class="hljs-selector-tag">applet</span>, <span class="hljs-selector-tag">object</span>, <span class="hljs-selector-tag">iframe</span>,
+<span class="hljs-selector-tag">h1</span>, <span class="hljs-selector-tag">h2</span>, <span class="hljs-selector-tag">h3</span>, <span class="hljs-selector-tag">h4</span>, <span class="hljs-selector-tag">h5</span>, <span class="hljs-selector-tag">h6</span>, <span class="hljs-selector-tag">p</span>, <span class="hljs-selector-tag">blockquote</span>, <span class="hljs-selector-tag">pre</span>,
+<span class="hljs-selector-tag">a</span>, <span class="hljs-selector-tag">abbr</span>, <span class="hljs-selector-tag">acronym</span>, <span class="hljs-selector-tag">address</span>, <span class="hljs-selector-tag">big</span>, <span class="hljs-selector-tag">cite</span>, <span class="hljs-selector-tag">code</span>,
+<span class="hljs-selector-tag">del</span>, <span class="hljs-selector-tag">dfn</span>, <span class="hljs-selector-tag">em</span>, <span class="hljs-selector-tag">img</span>, <span class="hljs-selector-tag">ins</span>, <span class="hljs-selector-tag">kbd</span>, <span class="hljs-selector-tag">q</span>, <span class="hljs-selector-tag">s</span>, <span class="hljs-selector-tag">samp</span>,
+<span class="hljs-selector-tag">small</span>, <span class="hljs-selector-tag">strike</span>, <span class="hljs-selector-tag">strong</span>, <span class="hljs-selector-tag">sub</span>, <span class="hljs-selector-tag">sup</span>, <span class="hljs-selector-tag">tt</span>, <span class="hljs-selector-tag">var</span>,
+<span class="hljs-selector-tag">b</span>, <span class="hljs-selector-tag">u</span>, <span class="hljs-selector-tag">i</span>, <span class="hljs-selector-tag">center</span>,
+<span class="hljs-selector-tag">dl</span>, <span class="hljs-selector-tag">dt</span>, <span class="hljs-selector-tag">dd</span>, <span class="hljs-selector-tag">ol</span>, <span class="hljs-selector-tag">ul</span>, <span class="hljs-selector-tag">li</span>,
+<span class="hljs-selector-tag">fieldset</span>, <span class="hljs-selector-tag">form</span>, <span class="hljs-selector-tag">label</span>, <span class="hljs-selector-tag">legend</span>,
+<span class="hljs-selector-tag">table</span>, <span class="hljs-selector-tag">caption</span>, <span class="hljs-selector-tag">tbody</span>, <span class="hljs-selector-tag">tfoot</span>, <span class="hljs-selector-tag">thead</span>, <span class="hljs-selector-tag">tr</span>, <span class="hljs-selector-tag">th</span>, <span class="hljs-selector-tag">td</span>,
+<span class="hljs-selector-tag">article</span>, <span class="hljs-selector-tag">aside</span>, <span class="hljs-selector-tag">canvas</span>, <span class="hljs-selector-tag">details</span>, <span class="hljs-selector-tag">embed</span>, 
+<span class="hljs-selector-tag">figure</span>, <span class="hljs-selector-tag">figcaption</span>, <span class="hljs-selector-tag">footer</span>, <span class="hljs-selector-tag">header</span>, <span class="hljs-selector-tag">hgroup</span>, 
+<span class="hljs-selector-tag">menu</span>, <span class="hljs-selector-tag">nav</span>, <span class="hljs-selector-tag">output</span>, <span class="hljs-selector-tag">ruby</span>, <span class="hljs-selector-tag">section</span>, <span class="hljs-selector-tag">summary</span>,
+<span class="hljs-selector-tag">time</span>, <span class="hljs-selector-tag">mark</span>, <span class="hljs-selector-tag">audio</span>, <span class="hljs-selector-tag">video</span> {
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">font</span>: inherit;
+    <span class="hljs-attribute">vertical-align</span>: baseline;
+}
+<span class="hljs-comment">/* HTML5 display-role reset for older browsers */</span>
+<span class="hljs-selector-tag">article</span>, <span class="hljs-selector-tag">aside</span>, <span class="hljs-selector-tag">details</span>, <span class="hljs-selector-tag">figcaption</span>, <span class="hljs-selector-tag">figure</span>, 
+<span class="hljs-selector-tag">footer</span>, <span class="hljs-selector-tag">header</span>, <span class="hljs-selector-tag">hgroup</span>, <span class="hljs-selector-tag">menu</span>, <span class="hljs-selector-tag">nav</span>, <span class="hljs-selector-tag">section</span> {
+    <span class="hljs-attribute">display</span>: block;
+}
+<span class="hljs-selector-tag">body</span> {
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1</span>;
+}
+<span class="hljs-selector-tag">ol</span>, <span class="hljs-selector-tag">ul</span> {
+    <span class="hljs-attribute">list-style</span>: none;
+}
+<span class="hljs-selector-tag">blockquote</span>, <span class="hljs-selector-tag">q</span> {
+    <span class="hljs-attribute">quotes</span>: none;
+}
+<span class="hljs-selector-tag">blockquote</span><span class="hljs-selector-pseudo">:before</span>, <span class="hljs-selector-tag">blockquote</span><span class="hljs-selector-pseudo">:after</span>,
+<span class="hljs-selector-tag">q</span><span class="hljs-selector-pseudo">:before</span>, <span class="hljs-selector-tag">q</span><span class="hljs-selector-pseudo">:after</span> {
+    <span class="hljs-attribute">content</span>: <span class="hljs-string">''</span>;
+    <span class="hljs-attribute">content</span>: none;
+}
+<span class="hljs-selector-tag">table</span> {
+    <span class="hljs-attribute">border-collapse</span>: collapse;
+    <span class="hljs-attribute">border-spacing</span>: <span class="hljs-number">0</span>;
+}</code></pre><p>Veja que ele divide as tags em grupos que devem receber valores genéricos, como <strong>margin</strong>: 0 , <strong>border</strong>: 0 , <strong>padding</strong>: 0 e outras que precisam de valores mais específicos, como</p><pre><code class="hljs css"><span class="hljs-selector-tag">ol</span>, <span class="hljs-selector-tag">ul</span> {
+    <span class="hljs-attribute">list-style</span>: none;
+}</code></pre><p>em que ele retira o estilo padrão da tag que utiliza círculos nos destaque dos itens de lista não ordenada.
+Há formas simplificadas também que, particularmente, utilizo mais em meus projetos, como o uso de <strong>seletores universais</strong>:</p><pre><code class="hljs css">*, 
+*<span class="hljs-selector-pseudo">:after</span>,
+*<span class="hljs-selector-pseudo">:before</span> {
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">box-sizing</span>: border-box;
+    <span class="hljs-attribute">text-decoration</span>: none;
+}
+<span class="hljs-selector-tag">body</span>{
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">list-style-type</span>: none;
+}</code></pre><p>Assim, ao passo da necessidade de adicionar valores às propriedades, pode adicionar.</p><h2 id="como-utilizar?">Como utilizar?</h2><p>Em seu arquivo html, dentro da tag <strong>head</strong>, utilize a tag <strong>link</strong>, para chamar o arquivo em que estará o seu reset CSS, como no exemplo:</p><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"reset.css"</span>&gt;</span></code></pre><p>Assim, a aparência do seu arquivo será alterada “resetando” as tags com as propriedade com as quais construiu o seu arquivo reset.</p><p>Com o reset CSS adicionado ao projeto, os demais estilos do layout podem ser aplicados sem prejuízo.</p><h3>Como usar?</h3><p>Já sabemos que se trata de uma folha de estilo e que podemos usá-la como normalmente utilizamos folhas de estilo em um projeto web, seja dentro do arquivo HTML, seja num arquivo externo (e que poderá ser acessado por todos os demais arquivos).</p><p>O mais habitual é que antes de se começar a estilizar o projeto, o arquivo reset css já seja adicionado para que seja  feita a remoção da formatação original dos browsers.</p><p>Pois caso o reset CSS for adicionado no meio do projeto, por exemplo, pode gerar dores de cabeça já que o layout foi criado utilizando como referência a formatação dos navegadores e não na <em>padronização</em> dos elementos que foram <em>resetados</em>.</p><h2 id="normalize:-o-que-e?">Normalize: O que é?</h2><p>A ideia de existir o Normalize CSS é a mesma que do Reset CSS, mas ele possui algumas diferenças importantes na hora de usar.</p><p>O principal objetivo do Normalize é deixar consistente a estilização padrão entre os navegadores. Algumas estilizações padrões dos navegadores que são úteis para o desenvolvimento de páginas são mantidas, alguns bugs comuns entre os navegadores são corrigidos, algumas melhorias de usabilidade e também todo o código do Normalize é comentado e com uma documentação sobre as modificações.</p><p>As diferenças entre Reset CSS e Normalize:</p><ul><li>O Reset CSS limpa <strong>TODOS</strong> os padrões dos navegadores. É uma forma muito agressiva de &quot;limpeza&quot;, enquanto o Normalize ainda mantém padrões que são úteis.</li><li>Normalize CSS corrige alguns bugs que existem nas estilizações padrões dos navegadores.</li><li>Normalize é modular. O código todo é separado por seções específicas, então você pode procurar por mudanças de forma mais direta.</li><li>O Normalize tem uma documentação detalhada sobre o uso e justificativas das mudanças feitas por ele.</li></ul><h3>Como usar?</h3><p>Da mesma forma que o Reset CSS, o Normalize é uma folha de estilos que deve ser importado antes de qualquer estilização no projeto. Ele deve ser o primeiro arquivo CSS a ser importado no projeto. É importante &quot;limpar&quot; primeiro o projeto antes de começar a desenvolver.</p><h3>Como implementar?</h3><p>Em seu projeto html, dentro da tag <strong>head</strong>, utilize a tag <strong>link</strong>, para chamar o arquivo normalize.css, como no exemplo:</p><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"normalize.css"</span>&gt;</span></code></pre><p>Assim seu projeto terá os estilos padrões removidos/alterados, para que você possa escrever sua própria folha de estilos sem se preocupar com estilizações que o navegador coloca por padrão.</p><p>Se você ainda não faz parte de Alura e quer saber mais como funciona o reset CSS e outras técnicas e  aprendizados do mundo do Front-End. <a
+href="https://www.alura.com.br/formacao-html-e-css"><strong>aqui na Alura temos uma formação de HTML5 e CSS3</strong></a>, nela você aprenderá muito mais do universo Front-End.</p><p>Até o próximo artigo :}</p></div><link
+rel="stylesheet" href="/assets/css/block/tableOfContents.1686744881.css"><div
+class="table-of-contents">
+<span>Confira neste artigo:</span><nav><ol><li>
+<a
+href="#reset-css:--o-que-e?">
+Reset CSS:  O que é?                </a></li><li>
+<a
+href="#exemplos-de-como-se-comporta-o-reset-css">
+Exemplos de como se comporta o reset CSS                </a></li><li>
+<a
+href="#como-criar-o-reset-css?">
+Como criar o Reset CSS?                </a></li><li>
+<a
+href="#como-utilizar?">
+Como utilizar?                </a></li><li>
+<a
+href="#normalize:-o-que-e?">
+Normalize: O que é?                </a></li></ol></nav></div></div><div
+class="cosmos-author-sobre">
+<img
+loading="lazy" class="cosmos-author-img" src="https://www.gravatar.com/avatar/d53a0be2f4403ded82d3d0044816410f.png?r=PG&size=200x200&date=2023-07-31&d=https%3A%2F%2Fcursos.alura.com.br%2Fassets%2Fimages%2Fforum%2Favatar_l.png" alt="Laís Cavalcanti" width="150" height="150"><div
+class="cosmos-author-txt"><div
+class="cosmos-author-name">Laís Cavalcanti</div><p>Como uma boa curiosa, gosto de ler, ver, ouvir e experimentar. Uma entusiasta da web acessível a todos.
+Hoje, faço parte da Escola de UX e Design na Alura.</p></div></div><nav
+class="cosmos__navigation">
+<a
+href="css-com-next-js" class="cosmos__navigation-link --previous"><div
+class="cosmos__navigation-item"><div
+class="cosmos__navigation-label">
+<span
+class="cosmos__navigation-decoration"></span>
+<span
+class="cosmos__navigation-description">Artigo Anterior</span></div>
+<strong> CSS com NextJS </strong></div>
+</a>
+<a
+href="configurando-rotas-com-next-link" class="cosmos__navigation-link --next"><div
+class="cosmos__navigation-item"><div
+class="cosmos__navigation-label">
+<span
+class="cosmos__navigation-decoration"></span>
+<span
+class="cosmos__navigation-description">Próximo Artigo</span></div>
+<strong
+class="cosmos__navigation-item-title" > Configurando rotas com Next.js e Link </strong></div>
+</a></nav></article></section><div
+class="cosmos-other-files"><div
+class="container --container-banner-flex"><div
+class="categories-artigos" style="background:#6bd1ff;">
+<svg
+class="categories-artigos-icon" style="fill:#ffffff" xmlns:xlink="http://www.w3.org/1999/xlink">
+<use
+xlink:href="/svg,1687868842/categorias#icon-categorias-front-end" />
+</svg></div><p
+class="cosmos-other-files-text">Veja outros artigos sobre <a
+href="/artigos/front-end" style="color:#6bd1ff">Front-end</a></p></div></div><div
+class="cosmos-color"><div
+class="cosmos --newsletter-spacing"><link
+rel="stylesheet" href="/assets/css/block/subscribeNewsletterCard.1686744881.css"><div
+class="subscribeNewsletterCard-container"><section
+class="subscribeNewsletterCard-wrapper"><div
+class="subscribeNewsletterCard-decoration"></div><div
+class="subscribeNewsletterCard-busca-box container"><div
+class="subscribeNewsletterCard-box-texto"><p
+class="subscribeNewsletterCard-texto-bold">Quer mergulhar em tecnologia e aprendizagem?</p><p
+class="subscribeNewsletterCard-texto-normal">Receba a newsletter que o nosso CEO escreve pessoalmente,
+com insights do mercado de trabalho, ciência e desenvolvimento de software</p></div><form
+id="subscribeNewsletterCard__activecampaign" class="subscribeNewsletterCard-form" action="/api/activecampaign" method="POST">
+<input
+type="hidden" name="list" value="14">
+<input
+type="hidden" name="retorno" value="/newsletter-cadastrado">
+<input
+class="activecampaign-input subscribeNewsletterCard-input" id="activecampaing-email" type="email" placeholder="Escreva seu email" name="email" required>
+<button
+class="activecampaign-button subscribeNewsletterCard-button" type="submit">Me inscreva</button></form></div></section></div> <script>(function() {
+            function criaCampo(nome, valor, form) {
+                if (valor === null) return;
+
+                var input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = nome;
+                input.value = valor;
+
+                form.appendChild(input);
+            }
+
+            function param(name) {
+                var url = location.href;
+                name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+                var regexS = "[\\?&]"+name+"=([^&#]*)";
+                var regex = new RegExp( regexS );
+                var results = regex.exec( url );
+                return results == null ? null : results[1];
+            }
+
+            function showNewsletterError() {
+                document.querySelector('.newsletter-message-error').classList.remove('newsletter-message-error--disabled');
+            }
+
+            function valida() {
+                var isValid = true;
+                var inputList = document.querySelector('#subscribeNewsletterCard__activecampaign')['list'];
+                var inputEmail = document.querySelector('#subscribeNewsletterCard__activecampaign')['email'];
+
+                isValid = validaEmail(inputEmail.value) && validaList(inputList.value);
+
+                if(!isValid) {
+                    showNewsletterError();
+                }
+
+                return isValid;
+            }
+
+            function validaList(list) {
+                return list != '-1';
+            }
+
+            function validaEmail(email) {
+                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(email);
+            }
+
+            var form = document.querySelector('#subscribeNewsletterCard__activecampaign');
+            if(!form) return;
+
+            criaCampo('utm_source', param('utm_source'), form);
+            criaCampo('utm_campaign', param('utm_campaign'), form);
+            criaCampo('utm_medium', param('utm_medium'), form);
+            criaCampo('utm_term', param('utm_term'), form);
+            criaCampo('utm_content', param('utm_content'), form);
+            criaCampo('full_url', location.href, form);
+            criaCampo('user_agent', navigator.userAgent, form);
+            criaCampo('referral', document.referrer, form);
+
+            form.onsubmit = valida;
+
+        })();</script> </div></div></section><link
+rel="stylesheet" href="/assets/css/block/footer.1686744881.css"><footer
+class="footer"><div
+class="container"><div
+class="footer-info flex-row"><div
+class="footer-logos">
+<a
+class="footer-logos-home" gtm-data='footer_primeira_secao_050' href="/">
+<img
+src="/assets/img/home/alura-logo.1686744881.svg" alt="Alura" class="footer-logo" loading="lazy">
+</a><p
+class="footer-navegue-lista-link --description">
+<span
+class="footer-empresa-item">AOVS Sistemas de Informática S.A</span>
+<span
+class="footer-empresa-item">CNPJ 05.555.382/0001-33</span></p></div><div
+class="footer-card-hotLinks social-desktop"><h2 class="footer-card-hotLinks-titulo">Nossas redes e apps</h2><div
+class="footer-card-hotLinks-info footer-card-redes">
+<a
+href="https://www.youtube.com/alura" gtm-data='footer_primeira_secao_065' class="footer-card-hotLinks-link"
+target="_blank" rel="noopener" title="YouTube da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-youtube">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-youtube" />
+</svg>
+<span>YouTube</span>
+</a>
+<a
+href="https://www.facebook.com/AluraCursosOnline/" gtm-data='footer_primeira_secao_066'
+class="footer-card-hotLinks-link" target="_blank" rel="noopener" title="Facebook da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-facebook">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-facebook" />
+</svg>
+<span>Facebook</span>
+</a>
+<a
+href="https://twitter.com/aluraonline" gtm-data='footer_primeira_secao_067' class="footer-card-hotLinks-link"
+target="_blank" rel="noopener" title="Twitter da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-twitter">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-twitter" />
+</svg>
+<span>Twitter</span>
+</a>
+<a
+href="https://instagram.com/aluraonline" class="footer-card-hotLinks-link" gtm-data='footer_primeira_secao_073'
+target="_blank" rel="noopener" title="Instagram da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-instagram">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-instagram" />
+</svg>
+<span>Instagram</span>
+</a>
+<a
+href="https://play.google.com/store/apps/details?id=br.com.alura.mobi&hl=pt_BR"
+gtm-data='footer_primeira_secao_069' class="footer-card-hotLinks-link" target="_blank" rel="noopener"
+title="Baixar na Google Play Store">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-mobile">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-googleplay" />
+</svg>
+<span>Google Play Store</span>
+</a>
+<a
+href="https://itunes.apple.com/br/app/alura-cursos-online/id1225776635" gtm-data='footer_primeira_secao_070'
+class="footer-card-hotLinks-link" target="_blank" rel="noopener" title="Baixar na AppStore">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-mobile">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-appstore" />
+</svg>
+<span>AppStore</span>
+</a>
+<a
+href="https://www.tiktok.com/@aluraonline?lang=pt-BR" gtm-data='footer_primeira_secao_071' class="footer-card-hotLinks-link"
+target="_blank" rel="noopener" title="TikTok da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-youtube">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-tiktok" />
+</svg>
+<span>TikTok</span>
+</a></div></div><div
+class="footer-card-hotLinks social-mobile"><h2 class="footer-card-hotLinks-titulo">Nossas redes e apps</h2><div
+class="footer-card-hotLinks-info footer-card-redes">
+<a
+href="https://www.youtube.com/alura" gtm-data='footer_primeira_secao_065' class="footer-card-hotLinks-link"
+target="_blank" rel="noopener" title="YouTube da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-youtube">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-youtube" />
+</svg>
+<span>YouTube</span>
+</a>
+<a
+href="https://www.facebook.com/AluraCursosOnline/" gtm-data='footer_primeira_secao_066'
+class="footer-card-hotLinks-link" target="_blank" rel="noopener" title="Facebook da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-facebook">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-facebook" />
+</svg>
+<span>Facebook</span>
+</a>
+<a
+href="https://twitter.com/aluraonline" gtm-data='footer_primeira_secao_067' class="footer-card-hotLinks-link"
+target="_blank" rel="noopener" title="Twitter da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-twitter">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-twitter" />
+</svg>
+<span>Twitter</span>
+</a>
+<a
+href="https://instagram.com/aluraonline" class="footer-card-hotLinks-link" gtm-data='footer_primeira_secao_073'
+target="_blank" rel="noopener" title="Instagram da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-instagram">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-instagram" />
+</svg>
+<span>Instagram</span>
+</a>
+<a
+href="https://play.google.com/store/apps/details?id=br.com.alura.mobi&hl=pt_BR"
+gtm-data='footer_primeira_secao_069' class="footer-card-hotLinks-link" target="_blank" rel="noopener"
+title="Baixar na Google Play Store">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-mobile">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-googleplay" />
+</svg>
+<span>Google Play Store</span>
+</a>
+<a
+href="https://itunes.apple.com/br/app/alura-cursos-online/id1225776635" gtm-data='footer_primeira_secao_070'
+class="footer-card-hotLinks-link" target="_blank" rel="noopener" title="Baixar na AppStore">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-mobile">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-appstore" />
+</svg>
+<span>AppStore</span>
+</a>
+<a
+href="https://www.tiktok.com/@aluraonline?lang=pt-BR" gtm-data='footer_primeira_secao_071' class="footer-card-hotLinks-link"
+target="_blank" rel="noopener" title="TikTok da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-youtube">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-tiktok" />
+</svg>
+<span>TikTok</span>
+</a></div></div></div><div
+class="footer-navegue"><div
+class="navegue-column"><h2 class="footer-navegacao-titulo">Institucional</h2><ul
+class="footer-navegue-lista"><li
+class="footer-navegue-lista-link"><a
+href="/sobre" gtm-data='footer_primeira_secao_063'>Sobre nós</a></li><li
+class="footer-navegue-lista-link"><a
+href="https://grupoalura.gupy.io">Trabalhe conosco</a></li><li
+class="footer-navegue-lista-link"><a
+href="https://www.alura.com.br/empresas">Para
+Empresas</a></li><li
+class="footer-navegue-lista-link"><a
+href="/escolas">Para Escolas</a></li><li
+class="footer-navegue-lista-link"><a
+href="/politica-de-privacidade"
+gtm-data='footer_primeira_secao_061'>Política de Privacidade</a></li><li
+class="footer-navegue-lista-link"><a
+href="/compromisso-de-integridade">Compromisso de Integridade</a></li><li
+class="footer-navegue-lista-link"><a
+href="/termos-de-uso" gtm-data='footer_primeira_secao_062'>Termos
+de
+Uso</a></li><li
+class="footer-navegue-lista-link"><a
+href="https://status.alura.com.br/">Status</a></li></ul></div><div
+class="navegue-column"><h2 class="footer-navegacao-titulo">A Alura</h2><ul
+class="footer-navegue-lista"><li
+class="footer-navegue-lista-link"><a
+href="/como-funciona" gtm-data='footer_primeira_secao_064'>Como
+Funciona</a></li><li
+class="footer-navegue-lista-link"><a
+href="/cursos-online-tecnologia"
+gtm-data='footer_primeira_secao_054'>Todos os cursos</a></li><li
+class="footer-navegue-lista-link"><a
+href="/depoimentos"
+gtm-data="footer_primeira_secao_069">Depoimentos</a></li><li
+class="footer-navegue-lista-link"><a
+href="/instrutores"
+gtm-data="footer_primeira_secao_061">Instrutores(as)</a></li><li
+class="footer-navegue-lista-link"><a
+href="/dev-em-t" gtm-data='footer_primeira_secao_065'>Dev em
+&lt;T&gt;</a></li></ul></div><div
+class="navegue-column"><h2 class="footer-navegacao-titulo">Conteúdos</h2><ul
+class="footer-navegue-lista"><li
+class="footer-navegue-lista-link"><a
+href="/cases">Alura Cases</a></li><li
+class="footer-navegue-lista-link"><a
+href="/imersao" gtm-data="footer_primeira_secao_068">Imersões</a></li><li
+class="footer-navegue-lista-link"><a
+href="/artigos" gtm-data='footer_primeira_secao_058'>Artigos</a></li><li
+class="footer-navegue-lista-link"><a
+href="/podcasts">Podcasts</a></li><li
+class="footer-navegue-lista-link"><a
+href="/empresas/artigos">Artigos de educação <br> corporativa</a></li></ul></div><div
+class="navegue-column"><h2 class="footer-navegacao-titulo">Fale Conosco</h2><ul
+class="footer-navegue-lista"><li
+class="footer-navegue-lista-link"><a
+href="https://www.alura.com.br/contato">Email e telefone</a></li><li
+class="footer-navegue-lista-link"><a
+href="https://suporte.alura.com.br/"
+gtm-data='footer_primeira_secao_066'>Perguntas frequentes</a></li></ul></div><div
+class="footer-column footer-column-cards"><div
+class="newsletter"><h2 class="newsletter-titulo">Novidades e Lançamentos</h2><div
+class="hubspot-form newsletter-form"> <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js?pre=1"></script> <script>hbspt.forms.create({
+                region: "na1",
+                portalId: "21748317",
+                formId: "39a8f8bd-d48f-4f45-8ed4-d26366176d39"
+              });</script> </div></div></div></div><div
+class="parceiros flex-column"><h2 class="footer-navegacao-titulo">Parceiros</h2><ul
+class="footer-navegue-lista flex-row"><li
+class="footer-navegue-lista-link --description footer-column-cards">
+<img
+src="/assets/img/footer/scale-up-endeavor.1686744881.png" alt="Programa de aceleração Scale-Up Endeavor"
+class="footer-navegue-lista__image" loading="lazy">
+<span
+class="footer-navegue-lista-link --description --partners">Nós, da Alura, somos uma das Scale-Ups
+selecionadas pela Endeavor, programa de aceleração das empresas que
+mais crescem no país.</span></li><li
+class="footer-navegue-lista-link --description footer-column-cards">
+<img
+src="/assets/img/footer/google-alumni-2021.1686744881.png" alt="Growth Academy 2021 do Google For Startups"
+class="footer-navegue-lista__image" loading="lazy">
+<span
+class="footer-navegue-lista-link --description --partners">Fomos uma das 7 startups selecionadas pelo
+Google For Startups a participar do programa Growth Academy em
+2021.</span></li></ul></div></div></footer><section
+class="footer_categorias-formacoes"><div
+class="container"><div
+class="footer_categorias_wrapper"><h2 class="footer_categorias_title">Cursos</h2><div
+class="footer_categorias_categorias footer-navegue-lista-link"><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-programacao">Cursos de Programação</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-programacao/logica">
+Lógica            </a>
+|                        <a
+href="/cursos-online-programacao/python">
+Python            </a>
+|                        <a
+href="/cursos-online-programacao/php">
+PHP            </a>
+|                        <a
+href="/cursos-online-programacao/java">
+Java            </a>
+|                        <a
+href="/cursos-online-programacao/dotnet">
+.NET            </a>
+|                        <a
+href="/cursos-online-programacao/node-js">
+Node JS            </a>
+|                        <a
+href="/cursos-online-programacao/linguagem-c">
+C            </a>
+|                        <a
+href="/cursos-online-programacao/computacao">
+Computação            </a>
+|                        <a
+href="/cursos-online-programacao/jogos">
+Jogos            </a>
+|                        <a
+href="/cursos-online-programacao/internet-das-coisas">
+IoT            </a></div></div><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-front-end">Cursos de Front-end</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-front-end/front-end">
+HTML, CSS            </a>
+|                        <a
+href="/cursos-online-front-end/reactjs">
+React            </a>
+|                        <a
+href="/cursos-online-front-end/angular">
+Angular            </a>
+|                        <a
+href="/cursos-online-front-end/javascript">
+JavaScript            </a>
+|                        <a
+href="/cursos-online-front-end/jquery">
+jQuery            </a></div></div><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-data-science">Cursos de Data Science</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-data-science/data-science">
+Ciência de dados            </a>
+|                        <a
+href="/cursos-online-data-science/business-intelligence">
+BI            </a>
+|                        <a
+href="/cursos-online-data-science/sql">
+SQL e Banco de Dados            </a>
+|                        <a
+href="/cursos-online-data-science/excel">
+Excel            </a>
+|                        <a
+href="/cursos-online-data-science/machine-learning">
+Machine Learning            </a>
+|                        <a
+href="/cursos-online-data-science/nosql">
+NoSQL            </a>
+|                        <a
+href="/cursos-online-data-science/estatistica">
+Estatística            </a></div></div><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-inteligencia-artificial">Cursos de Inteligência Artificial</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-inteligencia-artificial/ia-para-programacao">
+IA para Programação            </a>
+|                        <a
+href="/cursos-online-inteligencia-artificial/ia-para-dados">
+IA para Dados            </a></div></div><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-devops">Cursos de DevOps</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-devops/aws">
+AWS            </a>
+|                        <a
+href="/cursos-online-devops/azure">
+Azure            </a>
+|                        <a
+href="/cursos-online-devops/containers">
+Docker            </a>
+|                        <a
+href="/cursos-online-devops/seguranca">
+Segurança            </a>
+|                        <a
+href="/cursos-online-devops/infraestrutura-como-codigo">
+IaC            </a>
+|                        <a
+href="/cursos-online-devops/linux-comandos-e-processos">
+Linux            </a></div></div><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-design-ux">Cursos de UX & Design</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-design-ux/ux">
+Usabilidade e UX            </a>
+|                        <a
+href="/cursos-online-design-ux/video">
+Vídeo e Motion            </a>
+|                        <a
+href="/cursos-online-design-ux/3d">
+3D            </a></div></div><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-mobile">Cursos de Mobile</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-mobile/react-native">
+React Native            </a>
+|                        <a
+href="/cursos-online-mobile/flutter-mobile">
+Flutter            </a>
+|                        <a
+href="/cursos-online-mobile/ios">
+iOS e Swift            </a>
+|                        <a
+href="/cursos-online-mobile/android">
+Android, Kotlin            </a>
+|                        <a
+href="/cursos-online-mobile/jogos">
+Jogos            </a></div></div><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-inovacao-gestao">Cursos de Inovação & Gestão</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-inovacao-gestao/agilidade">
+Métodos Ágeis            </a>
+|                        <a
+href="/cursos-online-inovacao-gestao/softskills-carreira">
+Softskills            </a>
+|                        <a
+href="/cursos-online-inovacao-gestao/gestao-corporativa">
+Liderança e Gestão            </a>
+|                        <a
+href="/cursos-online-inovacao-gestao/startup-empreendedorismo">
+Startups            </a>
+|                        <a
+href="/cursos-online-inovacao-gestao/vendas">
+Vendas            </a></div></div></div></div></div></section><style>@media not all and (min-width: 1024px) {
+			.grupoCaelum {
+				display: none;
+			}
+		}
+
+		.grupoCaelum {
+			background: #fff;
+			height: 400px;
+			border-top: 1px solid #EBEBEE;
+		}
+
+		.grupoCaelum .container {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			padding-top: 0;
+			padding-bottom: 0;
+			height: 100%;
+		}
+
+		.grupoCaelum-list {
+			display: flex;
+			list-style: none;
+			width: 80%;
+			justify-content: space-between;
+			align-items: flex-start;
+			margin-top: 1.25rem;
+		}
+
+		.grupoCaelum-title {
+			width: 20%;
+		}
+
+		.grupoCaelum-column {
+			display: inline-block;
+			padding-left: 1.1875rem;
+			width: 240px;
+			height: 350px;
+			min-width: 160px;
+		}
+
+		.grupoCaelum-column-title {
+			font-size: 0.625rem;
+			color: #d7e0e5;
+			text-transform: uppercase;
+			font-weight: 600;
+			margin-bottom: 1.1875rem;
+		}
+
+		.grupoCaelum-column-list {
+			list-style: none;
+		}
+
+		.column-item-title {
+			font-size: 0.6875rem;
+			text-align: center;
+			vertical-align: middle;
+			display: inline-block;
+			margin-left: 0.375rem;
+		}
+
+		.grupoCaelum-column:not(:first-child) {
+			border-left: solid 1px #e3e9ed;
+		}
+
+		.grupoCaelum-title {
+			display: inline-block;
+			text-decoration: none;
+			color: #657176;
+			letter-spacing: normal;
+			font-size: 1.125rem;
+			margin-top: 3.375rem;
+		}
+
+		.column-item-logo {
+			width: 30px;
+			height: 30px;
+			vertical-align: middle;
+			display: inline-block;
+		}
+
+		.column-item {
+			margin-bottom: 1.0625rem;
+		}
+
+		.column-item a {
+			text-decoration: none;
+			color: #657176;
+			display: flex;
+			align-items: center;
+		}</style><footer
+class="caelum-footer" id="caelum-footer"><div
+class="grupoCaelum"><div
+class="container"><p
+class="grupoCaelum-title">Alura</p><ul
+class="grupoCaelum-list"><li
+class="grupoCaelum-column"><p
+class="grupoCaelum-column-title">Educação em Tecnologia</p><ul
+class="grupoCaelum-column-list"><li
+class="column-item">
+<a
+target="_blank" href="https://www.fiap.com.br/">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/fiap.1686744881.svg" alt="logo fiap" loading="lazy" />
+<span
+class="column-item-title">FIAP</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://www.casadocodigo.com.br">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/cdc.1686744881.svg" alt="logo casa do codigo" loading="lazy" />
+<span
+class="column-item-title">Casa do Código</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" style="fill: #657176" href="https://www.cursospm3.com.br/">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/pm3.1686744881.svg" alt="logo pm3" loading="lazy" />
+<span
+class="column-item-title">PM3 - Cursos de Produto</span>
+</a></li></ul></li><li
+class="grupoCaelum-column"><p
+class="grupoCaelum-column-title">Mais Alura</p><ul
+class="grupoCaelum-column-list"><li
+class="column-item">
+<a
+target="_blank" href="https://www.alurastart.com.br">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/alurastart.1686744881.svg" alt="logo alura start" loading="lazy" />
+<span
+class="column-item-title">Alura Start</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://www.aluralingua.com.br">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/aluralingua.1686744881.svg" alt="logo alura lingua" loading="lazy" />
+<span
+class="column-item-title">Alura Língua</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://www.alura.com.br/empresas">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/alura-empresas.1686744881.svg" alt="logo alura para empresas" loading="lazy" />
+<span
+class="column-item-title">Alura Para Empresas</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://www.aluracursos.com">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/alura.1686744881.svg" alt="logo alura latam" loading="lazy" />
+<span
+class="column-item-title">Alura LATAM</span>
+</a></li></ul></li><li
+class="grupoCaelum-column"><p
+class="grupoCaelum-column-title">Comunidade</p><ul
+class="grupoCaelum-column-list"><li
+class="column-item">
+<a
+target="_blank" href="
+https://techguide.sh/								">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/techguide.1686744881.svg" alt="logo tech guide" loading="lazy" />
+<span
+class="column-item-title">Tech Guide</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://7daysofcode.io/">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/7days.1686744881.svg" alt="logo 7 days of code"loading="lazy" />
+<span
+class="column-item-title">7 days of code</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://hipsters.jobs">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/hipstersjobs.1686744881.svg" alt="logo Hipsters ponto Jobs" loading="lazy" />
+<span
+class="column-item-title">Hipsters ponto Jobs</span>
+</a></li></ul></li><li
+class="grupoCaelum-column"><p
+class="grupoCaelum-column-title">Podcasts</p><ul
+class="grupoCaelum-column-list"><li
+class="column-item">
+<a
+target="_blank" href="https://hipsters.tech">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/hipsterstech.1686744881.svg" alt="logo Hipsters ponto Tech" loading="lazy" />
+<span
+class="column-item-title">Hipsters ponto Tech</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://www.devsemfronteiras.tech/">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/devsemfronteiras.1686744881.svg" alt="logo Dev sem fronteiras" loading="lazy" />
+<span
+class="column-item-title">Dev sem Fronteiras</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://layerspontotech.com.br">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/layerstech.1686744881.svg" alt="logo Layers ponto Tech" loading="lazy" />
+<span
+class="column-item-title">Layers ponto Tech</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://scuba.dev.br">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/scubadev.1686744881.svg" alt="logo Scuba Dev" loading="lazy" />
+<span
+class="column-item-title">Scuba Dev</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://bolhadev.tech/">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/bolhadev.1686744881.svg" alt="logo bolha dev" loading="lazy" />
+<span
+class="column-item-title">Bolha Dev</span>
+</a></li></ul></li></ul></div></div></footer> <script>(function(){
+    var match = location.pathname.match(/\/(bf-|black-?friday\/)([^\/]+)/);
+    if (match != null) {
+        var links = document.querySelectorAll('a[href]');
+        for (var i = 0; i < links.length; i++) {
+            var href = links[i].getAttribute('href');
+            if (href[0] === '/') {
+                links[i].setAttribute('href', '/bf-' + match[2] + href);
+            }
+        }
+    }
+})();</script> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" async></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/highlight.min.js"></script> <script>hljs.initHighlightingOnLoad();</script> <script src="/assets/js/lib/svg4everybody.min.1686744882.js" async></script> <script src="/assets/js/footer/footer.1686744882.js" defer></script> <script src="/assets/js/header/menu.1686744882.js" defer></script> <script src="/assets/js/header/busca.1687365821.js" defer></script> <script src="/assets/js/header/cursos.1686744882.js" defer></script> <script src="/assets/js/header/menuMobile.1687365821.js" defer></script> <script src="/assets/js/detect.1686744882.js" async></script> <script src="/assets/js/video.1686744882.js" defer></script> <script src="/assets/js/countdown.1686744882.js" async></script> <script src="/assets/js/header/cookie-influencer.1690566811.js" async></script> <script src="/assets/js/trackers.1686744882.js" async></script> <script src="/assets/js/courseIconFallback.1686744882.js" defer></script> <script type="text/javascript">_linkedin_partner_id = "465017";
+			window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+			window._linkedin_data_partner_ids.push(_linkedin_partner_id);</script> <script type="text/javascript">(function(){var s = document.getElementsByTagName("script")[0];
+			var b = document.createElement("script");
+			b.type = "text/javascript";b.async = true;
+			b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+			s.parentNode.insertBefore(b, s);})();</script> <noscript>
+<img
+height="1" width="1" style="display:none;" alt=""
+src="https://dc.ads.linkedin.com/collect/?pid=465017&fmt=gif" />
+</noscript> <script src="/assets/js/artigos/table-of-contents.1686744882.js" async></script> <script src="/assets/js/artigos/tracker-post-read.1690557002.js" async></script> <script src="https://static.codepen.io/assets/embed/ei.js" async></script> <script src="/assets/js/artigos/iframe-loader.1690557002.js" async></script> </body></html>

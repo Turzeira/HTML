@@ -1,0 +1,1266 @@
+<!DOCTYPE html><html
+lang="pt-BR"><head><meta
+charset="UTF-8"><meta
+name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0"><title>Flexbox CSS: guia completo, elementos e exemplos | Alura</title><meta
+name="description" content="Confira nosso guia visual completo para a ferramenta CSS FlexBox. Conheça suas propriedades, para que servem e saiba como utilizar cada uma delas!"><link
+rel="canonical" href="https://www.alura.com.br/artigos/css-guia-do-flexbox"><link
+rel="icon" href="/assets/favicon.1686744881.ico" /><link
+rel="preconnect" href="https://fonts.googleapis.com"><link
+rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Archivo+Black&display=swap" rel="stylesheet"><link
+rel="stylesheet" href="/bundle,base/_reset,base/base,base/buttons,base/colors-apostilas,base/colors,base/titulos.1690913936.css"><link
+rel="stylesheet" href="/bundle,artigos/artigos,artigos/iframe.1690557002.css"><link
+rel="stylesheet" href="/bundle,cosmos/cosmos-article-list,cosmos/cosmos-content,cosmos/cosmos-header,cosmos/cosmos-media,cosmos/cosmos-related,cosmos/cosmos-webseries,cosmos/cosmos,cosmos/cosmosPodcast,cosmos/highlight.1686744883.css"><meta
+property="og:locale" content="pt_BR"><meta
+property="og:description" content="Confira nosso guia visual completo para a ferramenta CSS FlexBox. Conheça suas propriedades, para que servem e saiba como utilizar cada uma delas!"><meta
+property="og:title" content="Flexbox CSS: guia completo, elementos e exemplos | Alura"><meta
+property="og:site_name" content="Alura"><meta
+property="og:url" content="https://www.alura.com.br/artigos/css-guia-do-flexbox?utm_term=&#38;utm_campaign=%5BSearch%5D+%5BPerformance%5D+-+Dynamic+Search+Ads+-+Artigos+e+Conte%C3%BAdos&#38;utm_source=adwords&#38;utm_medium=ppc&#38;hsa_acc=7964138385&#38;hsa_cam=11384329873&#38;hsa_grp=111087461203&#38;hsa_ad=645853715422&#38;hsa_src=g&#38;hsa_tgt=aud-488798962025:dsa-843358956400&#38;hsa_kw=&#38;hsa_mt=&#38;hsa_net=adwords&#38;hsa_ver=3&#38;gclid=CjwKCAjww7KmBhAyEiwA5-PUShz5Lbb67YLYAagCLp8Gq-0q8iz6BcG7TjVbqzF0zkLlRFJv4uN1dxoCvC0QAvD_BwE"><meta
+property="og:image" content="https://www.alura.com.br/artigos/assets/code/css-guia-do-flexbox.1691173037.png"><meta
+property="og:image:alt" content="Alura logo"><meta
+property="fb:app_id" content="140078819399376"><meta
+property="og:type" content="website"><meta
+name="twitter:card" content="summary_large_image"><meta
+name="theme-color" content="#2A7AE4"><meta
+name="google-site-verification" content="e-ieHUO1JHyNyCZv0Z8Nu-R3ECPykHiNHHEhPdF35Bk" /><meta
+name="thumbnail" content="https://www.alura.com.br/artigos/assets/code/css-guia-do-flexbox.1691173037.png"> <script>;
+                (function(w, d, s, l, i) {
+                    w[l] = w[l] || [];
+                    w[l].push({
+                        'gtm.start': new Date().getTime(),
+                        event: 'gtm.js'
+                    });
+                    var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                    j.async = true;
+                    j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                    f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayer', 'GTM-TN542JN');</script> <script>;
+                (function(w, d, s, l, i) {
+                    w[l] = w[l] || [];
+                    w[l].push({
+                        'gtm.start': new Date().getTime(),
+                        event: 'gtm.js'
+                    });
+                    var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                    j.async = true;
+                    j.src =
+                        'https://load.stape.alura.com.br/qukryqvi.js?id=' + i + dl;
+                    f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayerAlura', 'GTM-NTLWWLR');</script> <script>;
+                (function(w, d, s, l, i) {
+                    w[l] = w[l] || [];
+                    w[l].push({
+                        'gtm.start': new Date().getTime(),
+                        event: 'gtm.js'
+                    });
+                    var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s),
+                        dl = l != 'dataLayer' ? '&l=' + l : '';
+                    j.async = true;
+                    j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                    f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayerAluraTest', 'GTM-5293HPN');</script>  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-980051072"></script> <script>window.dataLayer = window.dataLayer || [];
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+                gtag('config', 'AW-980051072');</script> <script>! function(w, d, t) {
+                    w.TiktokAnalyticsObject = t;
+                    var ttq = w[t] = w[t] || [];
+                    ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"], ttq.setAndDefer = function(t, e) {
+                        t[e] = function() {
+                            t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+                        }
+                    };
+                    for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
+                    ttq.instance = function(t) {
+                        for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) ttq.setAndDefer(e, ttq.methods[n]);
+                        return e
+                    }, ttq.load = function(e, n) {
+                        var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
+                        ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = i, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {};
+                        n = document.createElement("script");
+                        n.type = "text/javascript", n.async = !0, n.src = i + "?sdkid=" + e + "&lib=" + t;
+                        e = document.getElementsByTagName("script")[0];
+                        e.parentNode.insertBefore(n, e)
+                    };
+                    ttq.load("CASS65BC77UAKBUROQ2G");
+                    ttq.page();
+                }(window, document, 'ttq');</script> <script async src='//www.google-analytics.com/analytics.js'></script> <script>var userId = (document.cookie.match('alura.userId=([^;]+)') || [null, null])[1];
+                window.ga = window.ga || function() {
+                    (ga.q = ga.q || []).push(arguments)
+                };
+                ga.l = +new Date;
+
+                                    ga(
+                        'create',
+                        'UA-42101548-1',
+                        'alura.com.br',
+                        'tracker0', {
+                            'siteSpeedSampleRate': 50
+                        }
+                    );
+
+                    if (userId) ga('tracker0.set', 'userId', userId);
+
+                    ga('tracker0.require', 'displayfeatures');
+                    ga('tracker0.send', 'pageview');
+                                    ga(
+                        'create',
+                        'UA-42101548-9',
+                        'alura.com.br',
+                        'tracker1', {
+                            'siteSpeedSampleRate': 50
+                        }
+                    );
+
+                    if (userId) ga('tracker1.set', 'userId', userId);
+
+                    ga('tracker1.require', 'displayfeatures');
+                    ga('tracker1.send', 'pageview');</script> </head><body
+class=""> <script async src="/assets/js/avatarOnError.1686744882.js"></script> <noscript><iframe
+src="https://www.googletagmanager.com/ns.html?id=GTM-TN542JN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe
+src="https://www.googletagmanager.com/ns.html?id=GTM-NTLWWLR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe
+src="https://www.googletagmanager.com/ns.html?id=GTM-5293HPN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script>! function(f, b, e, v, n, t, s) {
+                        if (f.fbq) return;
+                        n = f.fbq = function() {
+                            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                        };
+                        if (!f._fbq) f._fbq = n;
+                        n.push = n;
+                        n.loaded = !0;
+                        n.version = '2.0';
+                        n.queue = [];
+                        t = b.createElement(e);
+                        t.async = !0;
+                        t.src = v;
+                        s = b.getElementsByTagName(e)[0];
+                        s.parentNode.insertBefore(t, s)
+                    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+                    fbq('init', '1067810189950610');
+                    fbq('track', 'PageView');</script>  <script type="application/ld+json">{
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://www.alura.com.br",
+          "name": "Alura"
+        }
+      }   
+              ,{
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://www.alura.com.br/artigos",
+            "name": "Artigos"
+          }
+        }
+              ,{
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@id": "https://www.alura.com.br/artigos/front-end",
+            "name": "Front-end"
+          }
+        }
+              ,{
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@id": "https://www.alura.com.br/artigos/css-guia-do-flexbox",
+            "name": "Flexbox CSS: Guia Completo, Elementos e Exemplos"
+          }
+        }
+            ]
+    }</script> <link
+rel="stylesheet" href="/assets/css/block/header.1687365821.css"><header
+class="header internalPage"><div
+class="container"><nav
+class="header__nav">
+<a
+href="/" class="header__nav--logo">
+<img
+alt="Alura" src="/assets/img/home/alura-logo.1686744881.svg">
+</a><div
+class="header__nav--busca header-barraBusca"><form
+action="/busca" class="header__nav--busca-form">
+<input
+type="search" class="header__nav--busca-input" id="header-barraBusca-form-campoBusca" name="query" placeholder="O que você quer aprender?" required>
+<button
+class="header__nav--busca-submit" type="submit">
+<svg
+xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15">
+<g
+fill="none" fill-rule="evenodd" stroke="#D7F9FF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" transform="translate(1 1)">
+<path
+d="M13.637 12.86l-3.526-3.527" />
+<circle
+cx="5.667" cy="5.667" r="5.667" />
+</g>
+</svg>
+</button></form></div><div
+class="header__nav--ctas"><div
+class="header__nav--ctas-busca header-utilitario-busca" aria-label="Busca">
+<svg
+width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path
+d="M14.637 13.86L11.111 10.333" stroke="#40A5B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path
+d="M6.667 12.334C9.7968 12.334 12.334 9.7968 12.334 6.667C12.334 3.5372 9.7968 1 6.667 1C3.5372 1 1 3.5372 1 6.667C1 9.7968 3.5372 12.334 6.667 12.334Z" stroke="#40A5B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></div>
+<a
+class="header__nav--ctas-entrar header__nav--link-hover" href="https://cursos.alura.com.br/loginForm?urlAfterLogin=https://cursos.alura.com.br/dashboard">Entrar</a>
+<a
+class="header__nav--ctas-matricule" href="/planos-cursos-online">Matricule-se</a></div><div
+class="header__nav--menu"><div
+class="header__nav--menu-link all-courses header__nav--link-hover">
+<span>Todos os</span>
+<span>Cursos</span></div>
+<a
+href="/formacoes" class="header__nav--menu-link header__nav--link-hover">
+<span>Nossas</span>
+<span>Formações</span>
+</a>
+<a
+href="/empresas" class="header__nav--menu-link header__nav--link-hover">
+<span>Para</span>
+<span>Empresas</span>
+</a>
+<a
+href="/dev-em-t" class="header__nav--menu-link header__nav--link-hover">
+<span>Dev</span>
+<span>em &lt;T&gt;</span>
+</a></div></nav></div><div
+class="header__nav--courses"><div
+class="container"><ul
+class="header__nav--courses-list"><li
+class="header__nav--courses-item --programacao">
+<a
+href="/cursos-online-programacao" class="header__nav--courses-item-link">
+Programação                                    <span
+style="color: #00c86f;">_</span>
+</a></li><li
+class="header__nav--courses-item --front-end">
+<a
+href="/cursos-online-front-end" class="header__nav--courses-item-link">
+Front-end                                    <span
+style="color: #6bd1ff;">_</span>
+</a></li><li
+class="header__nav--courses-item --data-science">
+<a
+href="/cursos-online-data-science" class="header__nav--courses-item-link">
+Data Science                                    <span
+style="color: #9cd33b;">_</span>
+</a></li><li
+class="header__nav--courses-item --inteligencia-artificial">
+<a
+href="/cursos-online-inteligencia-artificial" class="header__nav--courses-item-link">
+Inteligência Artificial                                    <span
+style="color: #7b71ff;">_</span>
+</a></li><li
+class="header__nav--courses-item --devops">
+<a
+href="/cursos-online-devops" class="header__nav--courses-item-link">
+DevOps                                    <span
+style="color: #f16165;">_</span>
+</a></li><li
+class="header__nav--courses-item --design-ux">
+<a
+href="/cursos-online-design-ux" class="header__nav--courses-item-link">
+UX & Design                                    <span
+style="color: #dc6ebe;">_</span>
+</a></li><li
+class="header__nav--courses-item --mobile">
+<a
+href="/cursos-online-mobile" class="header__nav--courses-item-link">
+Mobile                                    <span
+style="color: #ffba05;">_</span>
+</a></li><li
+class="header__nav--courses-item --inovacao-gestao">
+<a
+href="/cursos-online-inovacao-gestao" class="header__nav--courses-item-link">
+Inovação & Gestão                                    <span
+style="color: #ff8c2a;">_</span>
+</a></li></ul></div></div></header><section
+class="cosmos-container-color"><div
+class="cosmos-color"><div
+class="cosmos artigos-topo"><div
+class="container">
+<a
+href="/artigos" class="artigos-topo__label">
+Artigos
+</a>
+&gt;
+<a
+class="artigos-topo__label --artigos-strong" href="/artigos/front-end" style="color:#6bd1ff">Front-end</a></div></div></div> <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.alura.com.br/artigos/css-guia-do-flexbox"
+  },
+  "headline": "Flexbox CSS: Guia Completo, Elementos e Exemplos",
+  "description": "Confira nosso guia visual completo para a ferramenta CSS FlexBox. Conheça suas propriedades, para que servem e saiba como utilizar cada uma delas!",
+  "image": "https://www.alura.com.br/artigos/assets/code/css-guia-do-flexbox.1691173037.png",
+  "datePublished": "2020-05-12",
+    "dateModified": "2023-06-20",
+      "author": {
+        "@type": "Organization",
+    "name": "Alura",
+    "url": "https://www.alura.com.br",
+    "logo": {
+      "@type": "ImageObject",
+    "url": "https://www.alura.com.br/assets/api/share/alura.jpg",
+      "height" : 60, 
+      "width" : 600,
+      "sameAs":["https://www.youtube.com/alura",
+               "https://www.facebook.com/AluraCursosOnline/",
+               "https://twitter.com/aluraonline",
+               "https://www.instagram.com/aluraonline/",
+               "https://play.google.com/store/apps/details?id=br.com.alura.mobi&hl=pt_BR&gl=US",
+               "https://apps.apple.com/br/app/alura-cursos-online/id1225776635"],
+      "contactPoint":{
+      "@type":"ContactPoint",
+     "email":"contato@alura.com.br",
+     "contactType":"customer support"
+     }},
+   "publisher": {
+    "@type": "Organization",
+    "name": "Alura",
+    "url": "https://www.alura.com.br",
+       "reviewedBy": {
+     "@type": "Person",
+     "name": "Juliana Amoasei",
+     "image": "https://github.com/JulianaAmoasei.png?size=200&d=https%3A%2F%2Fwww.gravatar.com%2Favatar%2F8d8f1e2a9d208c945839eb86537707d7.png%3Fr%3DPG%26size%3D200x200%26date%3D2023-08-04%26d%3Dhttps%253A%252F%252Fcursos.alura.com.br%252Fassets%252Fimages%252Fforum%252Favatar_j.png"
+   }
+     }}}</script> <section
+class="cosmos-color"><article
+class="cosmos"
+data-ga4-article-name="Flexbox CSS: Guia Completo, Elementos e Exemplos"
+data-ga4-article-category="Front-end"
+data-ga4-article-author="Juliana Amoasei"
+><div
+class="cosmos-header"><h1>Flexbox CSS: Guia Completo, Elementos e Exemplos</h1><div
+class="cosmos-image__wrapper">
+<img
+src="https://www.alura.com.br/artigos/assets/code/css-guia-do-flexbox.1691173037.png"
+alt="Flexbox CSS: Guia Completo, Elementos e Exemplos"
+class="cosmos-image cosmos-banner-top"
+style="border: none; padding: 0px; width: 100%; height: 300px; object-fit: cover; max-width: none;"></div><div
+class="cosmos-header-info"><div
+class="cosmos-author">
+<img
+loading="lazy" class="cosmos-author-img" src="https://github.com/JulianaAmoasei.png?size=200&d=https%3A%2F%2Fwww.gravatar.com%2Favatar%2F8d8f1e2a9d208c945839eb86537707d7.png%3Fr%3DPG%26size%3D200x200%26date%3D2023-08-04%26d%3Dhttps%253A%252F%252Fcursos.alura.com.br%252Fassets%252Fimages%252Fforum%252Favatar_j.png" alt="Juliana Amoasei" width="50" height="50"><div><div
+class="cosmos-author-name">Juliana Amoasei</div>
+<time
+class="cosmos-author-date"
+datetime="2023-06-20 15:34">
+Atualizado em 20 de  Junho                                    </time></div></div><div
+class="cosmos-container-social-media"><p
+class="cosmos-text-social-media">Compartilhe</p><ul
+class="cosmos-container-flex-social-media"><li
+class="--icon-twitter">
+<a
+href="https://twitter.com/share?url=https://www.alura.com.br/artigos/css-guia-do-flexbox"></a></li><li
+class="--icon-linkedin">
+<a
+href="https://linkedin.com/shareArticle?url=https://www.alura.com.br/artigos/css-guia-do-flexbox"></a></li><li
+class="--icon-facebook">
+<a
+href="https://facebook.com/share.php?u=https://www.alura.com.br/artigos/css-guia-do-flexbox"></a></li><li
+class="--icon-whatsapp">
+<a
+href="https://api.whatsapp.com/send?text=https://www.alura.com.br/artigos/css-guia-do-flexbox"></a></li></ul></div><div
+class="cosmos-related-gruides"></div></div></div><div
+class="cosmos-header-line"></div><div
+class="article__main-content"><div
+class="cosmos-color cosmos"><p>O Flexbox tem como meta ser um modo mais eficiente para criar leiautes, alinhar e distribuir espaços entre itens em um container, mesmo quando as dimensões destes itens são desconhecidas e/ou dinâmicas (daí o termo &quot;flex&quot;).</p><p>Vamos aprender os fundamentos do CSS Flexbox para alinhamento e posicionamento, e como utilizar suas funcionalidades corretamente.</p><h2 id="o-que-e-o-_flexbox_">O que é o <em>Flexbox</em></h2><p>Por muito tempo, as únicas ferramentas disponíveis para criar leiautes em CSS e posicionar elementos com boa compatibilidade entre browsers eram
+<code>float</code> e <code>position</code>. Porém, essas ferramentas possuem algumas limitações muito frustrantes, especialmente no que diz respeito à responsividade. Algumas tarefas que consideramos básicas em um leiaute, como centralização vertical de um elemento-filho com relação a um elemento-pai ou fazer com que elementos-filhos ocupem a mesma quantidade de espaço, ou colunas terem o mesmo tamanho independente da quantidade de conteúdo interno, eram impossíveis ou muito difíceis de serem manejadas com floats ou position, ao menos de forma prática e <em>flexível</em>.</p><p>A ferramenta Flexbox (de <em>Flexible Box</em>) foi criada para tornar essas tarefas mais simples e funcionais: os filhos de um elemento com Flexbox podem se posicionar em qualquer direção e pode ter dimensões flexíveis para se adaptar.</p><h2 id="elementos">Elementos</h2><p>O Flexbox é um módulo completo e não uma única propriedade; algumas delas devem ser declaradas no container (o elemento-pai, que chamamos de <em>flex container</em>), enquanto outras devem ser declaradas nos elementos-filhos (os <em>flex itens</em>).</p><p>Se o leiaute &quot;padrão&quot; é baseado nas direções <code>block</code> e <code>inline</code>, o leiaute Flex é baseado em direções &quot;flex flow&quot;. Veja abaixo um diagrama da especificação, explicando a ideia central por trás do leiaute Flex.</p>
+<img
+src="https://css-tricks.com/wp-content/uploads/2018/11/00-basic-terminology.svg" alt="Diagrama explicando a terminologia do Flex. A dimensão no sentido do eixo principal é chamada de tamanho principal, e a outra direção é chamada de transversal. Estes tamanhos, tanto o principal como o transversa, têm uma borda inicial e uma borda final" target="_blank" rel="noopener" loading="lazy" class="cosmos-image" /><p>Os ítens serão dispostos no leiaute seguindo ou o eixo principal ou o
+transversal.</p><ul><li><p>Eixo principal: o eixo principal de um <em>flex container</em> é o eixo primário e ao longo dele são inseridos os <em>flex items</em>. <strong>Cuidado</strong>: O eixo principal não é necessariamente horizontal; vai depender da propriedade <code>flex-direction</code> (veja abaixo).</p></li><li><p><em>main-start | main-end</em>: os <em>flex items</em> são inseridos dentro do container começando pelo lado <em>start</em>, indo em direção ao lado <em>end</em>.</p></li><li><p>Tamanho principal: A largura ou altura de um <em>flex item</em>, dependendo da direção do container, é o tamanho principal do ítem. A propriedade de tamanho principal de um <em>flex item</em> pode ser tanto <code>width</code> quanto <code>height</code>, dependendo de qual delas estiver na direção principal.</p></li><li><p>Eixo transversal: O eixo perpendicular ao eixo principal é chamado de eixo transversal. Sua direção depende da direção do eixo principal.</p></li><li><p><em>cross-start | cross-end</em>: Linhas flex são preenchidas com ítens e adicionadas ao container, começando pelo lado <em>cross start</em> do <em>flex container</em> em direção ao lado <em>cross end</em>.</p></li><li><p><em>cross size</em>: A largura ou altura de um <em>flex item</em>, dependendo do que estiver na dimensão transversal, é o <em>cross size</em> do íten. A propriedade <em>cross size</em> pode ser tanto a largura quanto a altura do ítem, o que estiver na transversal.</p></li></ul><p><strong>Flex container</strong> é o elemento que envolve sua estrutura. Você define que um elemento é um Flex Container com a propriedade <code>display</code> e valores <code>flex</code> ou <code>inline-flex</code>.</p><pre><code class="hljs xml">  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><pre><code class="hljs css">  <span class="hljs-selector-class">.flex-container</span> {
+    <span class="hljs-attribute">display</span>: flex;
+  }</code></pre><p><strong>Flex Item</strong> são elementos-filhos do flex container.</p><p><strong>Eixos ou Axes</strong> são as duas direções básicas que existem em um Flex Container:
+<em>main axis</em>, ou eixo principal, e <em>cross axis</em>, ou eixo transversal.</p><h2 id="propriedades-para-o-elemento-pai">Propriedades para o elemento-pai</h2>
+<img
+src="https://css-tricks.com/wp-content/uploads/2018/10/01-container.svg" alt="container flex" target="_blank" rel="noopener" loading="lazy" class="cosmos-image" /><p>Quando utilizamos o <em>Flexbox</em>, é muito importante saber quais propriedades são
+declaradas no elemento-pai (por exemplo, uma <code>div</code> que irá conter os elementos
+a serem alinhados) e quais serão declaradas nos elementos-filhos. Abaixo,
+seguem propriedades que devem ser declaradas utilizando o elemento-pai
+como seletor (para alinhar elementos-filhos):</p><p><strong>display</strong></p><p>Esta propriedade define um <em>flex container</em>; inline ou block dependendo dos valores passados. Coloca todos os elementos-filhos diretos num contexto Flex.</p><pre><code class="hljs css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex; <span class="hljs-comment">/* or inline-flex */</span>
+}</code></pre><p>Note que a propriedade de CSS <code>columns</code> não tem efeito em um <em>flex container</em>.</p><h3><strong>flex-direction</strong></h3>
+<img
+src="https://css-tricks.com/wp-content/uploads/2018/10/flex-direction.svg" alt="flex-direction" target="_blank" rel="noopener" loading="lazy" class="cosmos-image" /><p>Estabelece o eixo principal, definindo assim a direção em que os <em>flex items</em> são alinhados no <em>flex container</em>. O Flexbox é (com exceção de um wrapping opcional) um conceito de leiaute de uma só direção. Pense nos <em>flex items</em> inicialmente posicionaids ou em linhas horizontais ou em colunas verticais.</p><pre><code class="hljs css">  <span class="hljs-selector-class">.flex-container</span> {
+    <span class="hljs-attribute">flex-direction</span>: row | row-reverse | column | column-reverse;
+  }</code></pre><ul><li><code>row</code> (padrão): esquerda para a direita em <code>ltr</code> (left to right), direita para a esquerda em <code>rtl</code> (right to left)</li><li><code>row-reverse</code>: direita para a esquerda em <code>ltr</code>, esquerda para a direita em <code>rtl</code></li><li><code>column</code>: mesmo que <code>row</code>, mas de cima para baixo</li><li><code>column-reverse</code>: mesmo que <code>row-reverse</code> mas de baixo para cima</li></ul><h3><strong>flex-wrap</strong></h3>
+<img
+src="https://css-tricks.com/wp-content/uploads/2018/10/flex-wrap.svg" alt="flex-wrap" target="_blank" rel="noopener" loading="lazy" class="cosmos-image" /><p>Por padrão, os <em>flex items</em> vão todos tentar se encaixar em uma só linha. Com esta propriedade você pode modificar esse comportamento e permitir que os ítens quebrem para uma linha seguinte conforme for necessário.</p><pre><code class="hljs css">  <span class="hljs-selector-class">.flex-container</span> {
+    <span class="hljs-attribute">flex-wrap</span>: nowrap | wrap | wrap-reverse;
+  }</code></pre><ul><li><code>nowrap</code> (padrão): todos os <em>flex items</em> ficarão em uma só linha</li><li><code>wrap</code>: os <em>flex items</em> vão quebrar em múltiplas linhas, de cima para baixo</li><li><code>wrap-reverse</code>: os <em>flex items</em> vão quebrar em múltiplas linhas de baixo para cima</li></ul><h3><strong>flex-flow</strong></h3><p>A propriedade <strong>flex-flow</strong> é uma propriedade <em>shorthand</em> (uma mesma declaração
+inclui vários valores relacionados a mais de uma propriedade) que inclui
+<code>flex-direction</code> e <code>flex-wrap</code>. Determina quais serão os eixos pricipal e transversal do container. O valor padrão é <code>row nowrap</code>.</p><pre><code class="hljs css">  <span class="hljs-selector-class">.flex-container</span> {
+    <span class="hljs-attribute">flex-flow</span>: row nowrap | row wrap | column nowrap | column wrap;
+  }</code></pre><h3><strong>justify-content</strong></h3>
+<img
+src="https://css-tricks.com/wp-content/uploads/2018/10/justify-content.svg" alt="justify-content" target="_blank" rel="noopener" loading="lazy" class="cosmos-image" /><p>Esta propriedade define o alinhamento dos ítens ao longo do eixo principal. Ajuda a distribuir o espaço livre que sobrar no container tanto se todos os flex items em uma linha são inflexíveis, ou são flexíveis mas já atingiram seu tamanho máximo. Também exerce algum controle sobre o alinhamento de ítens quando eles ultrapassam o limite da linha.</p><pre><code class="hljs css">  <span class="hljs-selector-class">.flex-container</span> {
+    <span class="hljs-attribute">justify-content</span>: flex-start | flex-end | center | space-between | space-around | space-evenly;
+  }</code></pre><ul><li><code>flex-start</code> (padrão): os ítens são alinhados junto à borda de início (start) de acordo com qual for a <code>flex-direction</code> do container.</li><li><code>flex-end</code>: os ítens são alinhados junto à borda final (end) de acordo com qual for a <code>flex-direction</code> do container.</li><li><code>start</code>: os ítens são alinhados junto à borda de início da direção do <code>writing-mode</code> (modo de escrita).</li><li><code>end</code>: os ítens são alinhados junto à borda final da direção do <code>writing-mode</code> (modo de escrita).</li><li><code>left</code>: os ítens são alinhados junto à borda esquerda do container, a não ser que isso não faça sentido com o <code>flex-direction</code> que estiver sendo utilizado. Nesse caso, se comporta como <code>start</code>.</li><li><code>right</code>: os ítens são alinhados junto à borda direita do container, a não ser que isso não faça sentido com o <code>flex-direction</code> que estiver sendo utilizado. Nesse caso, se comporta como <code>start</code>.</li><li><code>center</code>: os ítens são centralizados na linha.</li><li><code>space-between</code>: os ítens são distribuídos de forma igual ao longo da linha; o primeiro ítem junto à borda inicial da linha, o último junto à borda final da linha.</li><li><code>space-around</code>: os ítens são distribuídos na linha com o mesmo espaçamento entre eles. Note que, visualmente, o espaço pode não ser igual, uma vez que todos os ítens tem a mesma quantidade de espaço dos dois lados: o primeiro item vai ter somente uma unidade de espaço junto à borda do container, mas duas unidades de espaço entre ele e o próximo ítem, pois o próximo ítem também tem seu próprio espaçamento que está sendo aplicado.</li><li><code>space-evenly</code>: os ítens são distribuídos de forma que o espaçamento entre quaisquer dois itens da linha (incluindo entre os ítens e as bordas) seja igual.</li></ul><p>Nota: o suporte dado pelos navegadores para estes valores é difuso. Por exemplo, space-between não tem suporte em nenhuma versão do Edge (até a elaboração deste tutorial) e start/end/left/right ainda não foram implementados no Chrome. Para tabelas detalhadas, consulte o MDN. Os valores mais seguros são flex-start, flex-end e center.</p><p>Também existem duas palavras-chave adicionais que você pode usar em conjunto com estes valores: <code>safe</code> e <code>unsafe</code>. Safe garante que, independente da forma que você faça esse tipo de posicionamento, não seja possível &quot;empurrar&quot; um elemento e fazer com que ele seja renderizado para fora da tela (por exemplo, acima do topo), de uma forma que faça com que o conteúdo seja impossível de movimentar com a rolagem da tela (o CSS chama isso de &quot;perda de dados&quot;).</p><h3><strong>align-items</strong></h3>
+<img
+src="https://css-tricks.com/wp-content/uploads/2018/10/align-items.svg" alt="align-items" target="_blank" rel="noopener" loading="lazy" class="cosmos-image" /><p>define o comportamento padrão de como <em>flex items</em> são alinhados de acordo com o eixo transversal (<em>cross axis</em>). De certa forma, funciona de forma similar ao <code>justify-content</code>, porém no eixo transversal (perpendicular ao eixo principal).</p><pre><code class="hljs css">  <span class="hljs-selector-class">.flex-container</span> {
+    <span class="hljs-attribute">align-items</span>: stretch | flex-start | flex-end | center | baseline;
+  }</code></pre><ul><li><code>stretch</code> (padrão): estica os ítens para preencher o container, respeitando o <code>min-width</code>/<code>max-width</code>).</li><li><code>flex-start</code>/ <code>start</code> / <code>self-start</code>: ítens são posicionados no início do eixo transversal. A diferença entre eles é sutil e diz respeito às regras de <code>flex-direction</code> ou <code>writing-mode</code>.</li><li><code>center</code>: ítens são centralizados no eixo transversal.</li><li><code>baseline</code>: ítens são alinhados de acordo com suas baselines.</li></ul><p>Os modificadores <code>safe</code> e <code>unsafe</code> pode ser usados em conjunto com todas essas palavras-chave (favor conferir o suporte de cada navegador) e servem para prevenir qualquer alinhamento de elementos que faça com que o conteúdo fique inacessível (por exemplo, para fora da tela).</p><h3><strong>align-content</strong></h3>
+<img
+src="https://css-tricks.com/wp-content/uploads/2018/10/align-content.svg" alt="align-content" target="_blank" rel="noopener" loading="lazy" class="cosmos-image" /><p>Organiza as linhas dentro de um flex container quando há espaço extra no eixo transversal, similar ao modo como <code>justify-content</code> alinha ítens individuais dentro do eixo principal.</p><p><strong>Importante</strong>: Esta propriedade não tem efeito quando há somente uma linha de flex items no container.</p><pre><code class="hljs css">  <span class="hljs-selector-class">.flex-container</span> {
+    <span class="hljs-attribute">align-content</span>: flex-start | flex-end | center | space-between | space-around | stretch;
+  }</code></pre><ul><li><code>flex-start</code> / <code>start</code>: ítens alinhados com o início do container. O valor (com maior suporte dos navegadores) flex-start se guia pela flex-direction, enquanto start se guia pela direção do writing-mode.</li><li><code>flex-end</code> / <code>end</code>: ítens alinhados com o final do container. O valor (com maior suporte dos navegadores) flex-end se guia pela flex-direction, enquanto end se guia pela direção do writing-mode.</li><li><code>center</code>: ítens centralizados no container.</li><li><code>space-between</code>: ítens distribuídos igualmente; a primeira linha junto ao início do container e a última linha junto ao final do container.</li><li><code>space-around</code>: ítens distribuídos igualmente com o mesmo espaçamento entre cada linha.</li><li><code>space-evenly</code>: ítens distribuídos igualmente com o mesmo espaçamento entre eles.</li><li><code>stretch</code> (padrão): ítens em cada linha esticam para ocupar o espaço remanescente entre elas.</li></ul><p>Os modificadores <code>safe</code> e <code>unsafe</code> pode ser usados em conjunto com todas essas palavras-chave (favor conferir o suporte de cada navegador) e servem para prevenir qualquer alinhamento de elementos que faça com que o conteúdo fique inacessível (por exemplo, para fora da tela).</p><h2 id="propriedades-para-elementos-filhos">Propriedades para elementos-filhos</h2><p>A seguir, veremos propriedades que devem ser declaradas tendo como seletor os elementos-filhos, ou seja:</p><pre><code class="hljs xml">  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-item"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-item"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex-item"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><p>Isso significa que, onde existe um elemento-pai com propriedade <em>flex</em> (o <em>flex-container</em>), é
+possível atribuir propriedades flex específicas também para as elementos-filhos (<em>flex-item</em>).</p><p>Você pode definir as propriedades abaixo para apenas um dos elementos-filhos através de um identificador, como uma classe específica.</p><h3><strong>order</strong></h3><p>Determina a ordem em que os elementos aparecerão.</p>
+<img
+src="https://css-tricks.com/wp-content/uploads/2018/10/order.svg" alt="order" target="_blank" rel="noopener" loading="lazy" class="cosmos-image" /><p>Por padrão os flex items são dispostos na tela na ordem do código. Mas a propriedade <code>order</code> controla a ordem em que aparecerão no container.</p><pre><code class="hljs css">  <span class="hljs-selector-class">.flex-item</span> {
+    <span class="hljs-attribute">order</span>: &lt;número&gt;; <span class="hljs-comment">/* o valor padrão é 0 */</span>
+  }</code></pre><h3><strong>flex-grow</strong></h3>
+<img
+src="https://css-tricks.com/wp-content/uploads/2018/10/flex-grow.svg" alt="grow" target="_blank" rel="noopener" loading="lazy" class="cosmos-image" /><p>Define a habilidade de um flex item de crescer, caso necessário. O valor dessa propriedade é um valor numérico sem indicação de unidade, que serve para cálculo de proporção. Este valor dita a quantidade de espaço disponível no container que será ocupado pelo item.</p><p>Se todos os ítens tiverem flex-grow definido em 1, o espaço remanescente no container será distribuído de forma igual entre todos. Se um dos ítens tem o valor de 2, vai ocupar o dobro de espaço no container com relação aos outros (ou pelo menos vai tentar fazer isso).</p><pre><code class="hljs css">  <span class="hljs-selector-class">.flex-item</span> {
+    <span class="hljs-attribute">flex-grow</span>: &lt;numero&gt;; <span class="hljs-comment">/* o valor default(padrão) é 0 */</span>
+  }</code></pre><p>Valores negativos não são aceitos pela propriedade.</p><h3><strong>flex-shrink</strong></h3><p>Define a habilidade de um flex item de encolher, caso necessário.</p><pre><code class="hljs css">  <span class="hljs-selector-class">.flex-item</span> {
+    <span class="hljs-attribute">flex-shrink</span>: &lt;número&gt;; <span class="hljs-comment">/* o valor padrão é 0 */</span>
+  }</code></pre><p>Valores negativos não são aceitos pela propriedade.</p><p><strong>flex-basis</strong></p><p>Define o tamanho padrão para um elemento antes que o espaço remanescente do container seja distribuído. Pode ser um comprimento (por exemplo, 20%, 5rem, etc) ou uma palavra-chave. A palavra-chave <code>auto</code> significa &quot;observe minhas propriedades de altura ou largura&quot; (o que era feito pela palavra-chave <code>main-size</code>, que foi depreciada). A palavra-chave <code>content</code> significa &quot;estabeleça o tamanho com base no conteúdo interno do ítem&quot; - essa palavra-chave ainda não tem muito suporte, então não é fácil de ser testada, assim como suas relacionadas: <code>max-content</code>, <code>min-content</code> e <code>fit-content</code>.</p><pre><code class="hljs css">  <span class="hljs-selector-class">.flex-item</span> {
+    <span class="hljs-attribute">flex-basis</span>: flex-basis:  | auto; <span class="hljs-comment">/* o valor padrão é auto */</span>
+  }</code></pre><p>Com o valor de <code>0</code>, o espaço extra ao redor do conteúdo não é considerado. Com o valor de <code>auto</code>, o espaço extra é distribuído com base no valor de <code>flex-grox</code> do ítem.</p><h3><strong>flex</strong></h3><p>Esta é a propriedade <em>shorthand</em> para <code>flex-grow</code>, <code>flex-shrink</code> e <code>flex-basis</code>, combinadas. O segundo e terceiro parâmetros (<code>flex-shrink</code> e <code>flex-basis</code>) são opcionais. O padrão é <code>0 1 auto</code>, mas se você definir com apenas um número, é equivalente a <code>0 1</code>.</p><pre><code class="hljs css">  <span class="hljs-selector-class">.item</span> {
+    <span class="hljs-attribute">flex</span>: none | [ &lt;<span class="hljs-string">'flex-grow'</span>&gt; &lt;<span class="hljs-string">'flex-shrink'</span>&gt;? || &lt;<span class="hljs-string">'flex-basis'</span>&gt; ]
+  }</code></pre><p><strong>É recomendado que você utilize esta propriedade <em>shorthand</em></strong> ao invés de definir cada uma das propriedades em separado. O <em>shorthand</em> define os outros valores de forma inteligente.</p><h3><strong>align-self</strong></h3>
+<img
+src="https://css-tricks.com/wp-content/uploads/2018/10/align-self.svg" alt="align-self" target="_blank" rel="noopener" loading="lazy" class="cosmos-image" /><p>Permite que o alinhamento padrão (ou o que estiver definido por <code>align-items</code>) seja sobrescrito para ítens individuais.</p><p>Por favor veja a explicação da propriedade <code>align-items</code> para entender quais são os possíveis valores.</p><pre><code class="hljs css">  <span class="hljs-selector-class">.item</span> {
+    <span class="hljs-attribute">align-self</span>: auto | flex-start | flex-end | center | baseline | stretch;
+  }</code></pre><h2 id="importante!">Importante!</h2><ul><li>O CSS só enxerga a hierarquia pai-filho; não vai aplicar as propriedades Flex
+para elementos que não estejam diretamente relacionados;</li><li>Para que as propriedades funcionem nos elementos-filhos, as pais devem ter
+propriedade <code>display: flex;</code>.</li><li>As propriedades <code>float</code>, <code>clear</code> e <code>vertical-align</code> não têm efeito em
+flex-items.</li></ul><h2 id="vamos-praticar?">Vamos praticar?</h2><p><a
+href="https://flexboxfroggy.com/" target="_blank" rel="noopener">Flexbox Froggy</a></p><h2 id="links-uteis">Links úteis</h2><p>Assim como qualquer outra nova funcionalidade que aprendemos, é fundamental praticar bastante e pesquisar sempre que temos dúvidas. A seguir, alguns links úteis.</p><p>Este conteúdo se baseia em grande parte no tutorial da <a
+href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="noopener">CSS Tricks</a>, com nossos agradecimentos! Guarde nos seus favoritos para consultar sempre que precisar.</p><p>O guia do CSS Tricks também aborda alguns outros aspectos importantes do Flex: suporte dos navegadores, bugs, propriedades relacionadas, prefixos e etc. Caso tenha alguma dúvida que não foi abordada neste artigo, você pode consultar estes temas relacionados no link.</p><ul><li><p><a
+href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank" rel="noopener">Flexbox no MDN</a></p></li><li><p><a
+href="https://www.w3schools.com/csS/css3_flexbox.asp" target="_blank" rel="noopener">Flexbox no W3Schools</a></p></li></ul><p>Gostou do post e quer saber mais? Aqui na <strong>Alura</strong> temos uma <a
+href="https://www.alura.com.br/cursos-online-front-end"><strong>formação front-end</strong></a> onde você vai aprender mais sobre <strong>HTML e CSS</strong></p></div><link
+rel="stylesheet" href="/assets/css/block/tableOfContents.1686744881.css"><div
+class="table-of-contents">
+<span>Confira neste artigo:</span><nav><ol><li>
+<a
+href="#o-que-e-o-_flexbox_">
+O que é o <em>Flexbox</em>                </a></li><li>
+<a
+href="#elementos">
+Elementos                </a></li><li>
+<a
+href="#propriedades-para-o-elemento-pai">
+Propriedades para o elemento-pai                </a></li><li>
+<a
+href="#propriedades-para-elementos-filhos">
+Propriedades para elementos-filhos                </a></li><li>
+<a
+href="#importante!">
+Importante!                </a></li><li>
+<a
+href="#vamos-praticar?">
+Vamos praticar?                </a></li><li>
+<a
+href="#links-uteis">
+Links úteis                </a></li></ol></nav></div></div><div
+class="cosmos-author-sobre">
+<img
+loading="lazy" class="cosmos-author-img" src="https://github.com/JulianaAmoasei.png?size=200&d=https%3A%2F%2Fwww.gravatar.com%2Favatar%2F8d8f1e2a9d208c945839eb86537707d7.png%3Fr%3DPG%26size%3D200x200%26date%3D2023-08-04%26d%3Dhttps%253A%252F%252Fcursos.alura.com.br%252Fassets%252Fimages%252Fforum%252Favatar_j.png" alt="Juliana Amoasei" width="150" height="150"><div
+class="cosmos-author-txt"><div
+class="cosmos-author-name">Juliana Amoasei</div><p>Desenvolvedora JavaScript com background multidisciplinar, sempre aprendendo para ensinar e vice-versa. Acredito no potencial do conhecimento como agente de mudança pessoal e social. Atuo como instrutora na Escola de Programação da Alura e, fora da tela preta, me dedico ao Kung Fu e a nerdices em geral.</p></div></div><nav
+class="cosmos__navigation">
+<a
+href="cursos-tecnicos-tecnologia-da-informacao" class="cosmos__navigation-link --previous"><div
+class="cosmos__navigation-item"><div
+class="cosmos__navigation-label">
+<span
+class="cosmos__navigation-decoration"></span>
+<span
+class="cosmos__navigation-description">Artigo Anterior</span></div>
+<strong> Cursos Técnicos em Tecnologia da Informação </strong></div>
+</a>
+<a
+href="imersao-css" class="cosmos__navigation-link --next"><div
+class="cosmos__navigation-item"><div
+class="cosmos__navigation-label">
+<span
+class="cosmos__navigation-decoration"></span>
+<span
+class="cosmos__navigation-description">Próximo Artigo</span></div>
+<strong
+class="cosmos__navigation-item-title" > Vamos criar um site com HTML e CSS na Imersão Hipsters.CSS! </strong></div>
+</a></nav></article></section><div
+class="cosmos-other-files"><div
+class="container --container-banner-flex"><div
+class="categories-artigos" style="background:#6bd1ff;">
+<svg
+class="categories-artigos-icon" style="fill:#ffffff" xmlns:xlink="http://www.w3.org/1999/xlink">
+<use
+xlink:href="/svg,1687868842/categorias#icon-categorias-front-end" />
+</svg></div><p
+class="cosmos-other-files-text">Veja outros artigos sobre <a
+href="/artigos/front-end" style="color:#6bd1ff">Front-end</a></p></div></div><div
+class="cosmos-color"><div
+class="cosmos --newsletter-spacing"><link
+rel="stylesheet" href="/assets/css/block/subscribeNewsletterCard.1686744881.css"><div
+class="subscribeNewsletterCard-container"><section
+class="subscribeNewsletterCard-wrapper"><div
+class="subscribeNewsletterCard-decoration"></div><div
+class="subscribeNewsletterCard-busca-box container"><div
+class="subscribeNewsletterCard-box-texto"><p
+class="subscribeNewsletterCard-texto-bold">Quer mergulhar em tecnologia e aprendizagem?</p><p
+class="subscribeNewsletterCard-texto-normal">Receba a newsletter que o nosso CEO escreve pessoalmente,
+com insights do mercado de trabalho, ciência e desenvolvimento de software</p></div><form
+id="subscribeNewsletterCard__activecampaign" class="subscribeNewsletterCard-form" action="/api/activecampaign" method="POST">
+<input
+type="hidden" name="list" value="14">
+<input
+type="hidden" name="retorno" value="/newsletter-cadastrado">
+<input
+class="activecampaign-input subscribeNewsletterCard-input" id="activecampaing-email" type="email" placeholder="Escreva seu email" name="email" required>
+<button
+class="activecampaign-button subscribeNewsletterCard-button" type="submit">Me inscreva</button></form></div></section></div> <script>(function() {
+            function criaCampo(nome, valor, form) {
+                if (valor === null) return;
+
+                var input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = nome;
+                input.value = valor;
+
+                form.appendChild(input);
+            }
+
+            function param(name) {
+                var url = location.href;
+                name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+                var regexS = "[\\?&]"+name+"=([^&#]*)";
+                var regex = new RegExp( regexS );
+                var results = regex.exec( url );
+                return results == null ? null : results[1];
+            }
+
+            function showNewsletterError() {
+                document.querySelector('.newsletter-message-error').classList.remove('newsletter-message-error--disabled');
+            }
+
+            function valida() {
+                var isValid = true;
+                var inputList = document.querySelector('#subscribeNewsletterCard__activecampaign')['list'];
+                var inputEmail = document.querySelector('#subscribeNewsletterCard__activecampaign')['email'];
+
+                isValid = validaEmail(inputEmail.value) && validaList(inputList.value);
+
+                if(!isValid) {
+                    showNewsletterError();
+                }
+
+                return isValid;
+            }
+
+            function validaList(list) {
+                return list != '-1';
+            }
+
+            function validaEmail(email) {
+                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(email);
+            }
+
+            var form = document.querySelector('#subscribeNewsletterCard__activecampaign');
+            if(!form) return;
+
+            criaCampo('utm_source', param('utm_source'), form);
+            criaCampo('utm_campaign', param('utm_campaign'), form);
+            criaCampo('utm_medium', param('utm_medium'), form);
+            criaCampo('utm_term', param('utm_term'), form);
+            criaCampo('utm_content', param('utm_content'), form);
+            criaCampo('full_url', location.href, form);
+            criaCampo('user_agent', navigator.userAgent, form);
+            criaCampo('referral', document.referrer, form);
+
+            form.onsubmit = valida;
+
+        })();</script> </div></div></section><link
+rel="stylesheet" href="/assets/css/block/footer.1686744881.css"><footer
+class="footer"><div
+class="container"><div
+class="footer-info flex-row"><div
+class="footer-logos">
+<a
+class="footer-logos-home" gtm-data='footer_primeira_secao_050' href="/">
+<img
+src="/assets/img/home/alura-logo.1686744881.svg" alt="Alura" class="footer-logo" loading="lazy">
+</a><p
+class="footer-navegue-lista-link --description">
+<span
+class="footer-empresa-item">AOVS Sistemas de Informática S.A</span>
+<span
+class="footer-empresa-item">CNPJ 05.555.382/0001-33</span></p></div><div
+class="footer-card-hotLinks social-desktop"><h2 class="footer-card-hotLinks-titulo">Nossas redes e apps</h2><div
+class="footer-card-hotLinks-info footer-card-redes">
+<a
+href="https://www.youtube.com/alura" gtm-data='footer_primeira_secao_065' class="footer-card-hotLinks-link"
+target="_blank" rel="noopener" title="YouTube da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-youtube">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-youtube" />
+</svg>
+<span>YouTube</span>
+</a>
+<a
+href="https://www.facebook.com/AluraCursosOnline/" gtm-data='footer_primeira_secao_066'
+class="footer-card-hotLinks-link" target="_blank" rel="noopener" title="Facebook da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-facebook">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-facebook" />
+</svg>
+<span>Facebook</span>
+</a>
+<a
+href="https://twitter.com/aluraonline" gtm-data='footer_primeira_secao_067' class="footer-card-hotLinks-link"
+target="_blank" rel="noopener" title="Twitter da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-twitter">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-twitter" />
+</svg>
+<span>Twitter</span>
+</a>
+<a
+href="https://instagram.com/aluraonline" class="footer-card-hotLinks-link" gtm-data='footer_primeira_secao_073'
+target="_blank" rel="noopener" title="Instagram da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-instagram">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-instagram" />
+</svg>
+<span>Instagram</span>
+</a>
+<a
+href="https://play.google.com/store/apps/details?id=br.com.alura.mobi&hl=pt_BR"
+gtm-data='footer_primeira_secao_069' class="footer-card-hotLinks-link" target="_blank" rel="noopener"
+title="Baixar na Google Play Store">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-mobile">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-googleplay" />
+</svg>
+<span>Google Play Store</span>
+</a>
+<a
+href="https://itunes.apple.com/br/app/alura-cursos-online/id1225776635" gtm-data='footer_primeira_secao_070'
+class="footer-card-hotLinks-link" target="_blank" rel="noopener" title="Baixar na AppStore">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-mobile">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-appstore" />
+</svg>
+<span>AppStore</span>
+</a>
+<a
+href="https://www.tiktok.com/@aluraonline?lang=pt-BR" gtm-data='footer_primeira_secao_071' class="footer-card-hotLinks-link"
+target="_blank" rel="noopener" title="TikTok da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-youtube">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-tiktok" />
+</svg>
+<span>TikTok</span>
+</a></div></div><div
+class="footer-card-hotLinks social-mobile"><h2 class="footer-card-hotLinks-titulo">Nossas redes e apps</h2><div
+class="footer-card-hotLinks-info footer-card-redes">
+<a
+href="https://www.youtube.com/alura" gtm-data='footer_primeira_secao_065' class="footer-card-hotLinks-link"
+target="_blank" rel="noopener" title="YouTube da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-youtube">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-youtube" />
+</svg>
+<span>YouTube</span>
+</a>
+<a
+href="https://www.facebook.com/AluraCursosOnline/" gtm-data='footer_primeira_secao_066'
+class="footer-card-hotLinks-link" target="_blank" rel="noopener" title="Facebook da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-facebook">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-facebook" />
+</svg>
+<span>Facebook</span>
+</a>
+<a
+href="https://twitter.com/aluraonline" gtm-data='footer_primeira_secao_067' class="footer-card-hotLinks-link"
+target="_blank" rel="noopener" title="Twitter da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-twitter">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-twitter" />
+</svg>
+<span>Twitter</span>
+</a>
+<a
+href="https://instagram.com/aluraonline" class="footer-card-hotLinks-link" gtm-data='footer_primeira_secao_073'
+target="_blank" rel="noopener" title="Instagram da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-instagram">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-instagram" />
+</svg>
+<span>Instagram</span>
+</a>
+<a
+href="https://play.google.com/store/apps/details?id=br.com.alura.mobi&hl=pt_BR"
+gtm-data='footer_primeira_secao_069' class="footer-card-hotLinks-link" target="_blank" rel="noopener"
+title="Baixar na Google Play Store">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-mobile">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-googleplay" />
+</svg>
+<span>Google Play Store</span>
+</a>
+<a
+href="https://itunes.apple.com/br/app/alura-cursos-online/id1225776635" gtm-data='footer_primeira_secao_070'
+class="footer-card-hotLinks-link" target="_blank" rel="noopener" title="Baixar na AppStore">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-mobile">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-appstore" />
+</svg>
+<span>AppStore</span>
+</a>
+<a
+href="https://www.tiktok.com/@aluraonline?lang=pt-BR" gtm-data='footer_primeira_secao_071' class="footer-card-hotLinks-link"
+target="_blank" rel="noopener" title="TikTok da Alura">
+<svg
+class="footer-card-hotLinks-icon footer-card-hotLinks-youtube">
+<use
+xlink:href="/svg,1686744881/footer#icon-footer-tiktok" />
+</svg>
+<span>TikTok</span>
+</a></div></div></div><div
+class="footer-navegue"><div
+class="navegue-column"><h2 class="footer-navegacao-titulo">Institucional</h2><ul
+class="footer-navegue-lista"><li
+class="footer-navegue-lista-link"><a
+href="/sobre" gtm-data='footer_primeira_secao_063'>Sobre nós</a></li><li
+class="footer-navegue-lista-link"><a
+href="https://grupoalura.gupy.io">Trabalhe conosco</a></li><li
+class="footer-navegue-lista-link"><a
+href="https://www.alura.com.br/empresas">Para
+Empresas</a></li><li
+class="footer-navegue-lista-link"><a
+href="/escolas">Para Escolas</a></li><li
+class="footer-navegue-lista-link"><a
+href="/politica-de-privacidade"
+gtm-data='footer_primeira_secao_061'>Política de Privacidade</a></li><li
+class="footer-navegue-lista-link"><a
+href="/compromisso-de-integridade">Compromisso de Integridade</a></li><li
+class="footer-navegue-lista-link"><a
+href="/termos-de-uso" gtm-data='footer_primeira_secao_062'>Termos
+de
+Uso</a></li><li
+class="footer-navegue-lista-link"><a
+href="https://status.alura.com.br/">Status</a></li></ul></div><div
+class="navegue-column"><h2 class="footer-navegacao-titulo">A Alura</h2><ul
+class="footer-navegue-lista"><li
+class="footer-navegue-lista-link"><a
+href="/como-funciona" gtm-data='footer_primeira_secao_064'>Como
+Funciona</a></li><li
+class="footer-navegue-lista-link"><a
+href="/cursos-online-tecnologia"
+gtm-data='footer_primeira_secao_054'>Todos os cursos</a></li><li
+class="footer-navegue-lista-link"><a
+href="/depoimentos"
+gtm-data="footer_primeira_secao_069">Depoimentos</a></li><li
+class="footer-navegue-lista-link"><a
+href="/instrutores"
+gtm-data="footer_primeira_secao_061">Instrutores(as)</a></li><li
+class="footer-navegue-lista-link"><a
+href="/dev-em-t" gtm-data='footer_primeira_secao_065'>Dev em
+&lt;T&gt;</a></li></ul></div><div
+class="navegue-column"><h2 class="footer-navegacao-titulo">Conteúdos</h2><ul
+class="footer-navegue-lista"><li
+class="footer-navegue-lista-link"><a
+href="/cases">Alura Cases</a></li><li
+class="footer-navegue-lista-link"><a
+href="/imersao" gtm-data="footer_primeira_secao_068">Imersões</a></li><li
+class="footer-navegue-lista-link"><a
+href="/artigos" gtm-data='footer_primeira_secao_058'>Artigos</a></li><li
+class="footer-navegue-lista-link"><a
+href="/podcasts">Podcasts</a></li><li
+class="footer-navegue-lista-link"><a
+href="/empresas/artigos">Artigos de educação <br> corporativa</a></li></ul></div><div
+class="navegue-column"><h2 class="footer-navegacao-titulo">Fale Conosco</h2><ul
+class="footer-navegue-lista"><li
+class="footer-navegue-lista-link"><a
+href="https://www.alura.com.br/contato">Email e telefone</a></li><li
+class="footer-navegue-lista-link"><a
+href="https://suporte.alura.com.br/"
+gtm-data='footer_primeira_secao_066'>Perguntas frequentes</a></li></ul></div><div
+class="footer-column footer-column-cards"><div
+class="newsletter"><h2 class="newsletter-titulo">Novidades e Lançamentos</h2><div
+class="hubspot-form newsletter-form"> <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js?pre=1"></script> <script>hbspt.forms.create({
+                region: "na1",
+                portalId: "21748317",
+                formId: "39a8f8bd-d48f-4f45-8ed4-d26366176d39"
+              });</script> </div></div></div></div><div
+class="parceiros flex-column"><h2 class="footer-navegacao-titulo">Parceiros</h2><ul
+class="footer-navegue-lista flex-row"><li
+class="footer-navegue-lista-link --description footer-column-cards">
+<img
+src="/assets/img/footer/scale-up-endeavor.1686744881.png" alt="Programa de aceleração Scale-Up Endeavor"
+class="footer-navegue-lista__image" loading="lazy">
+<span
+class="footer-navegue-lista-link --description --partners">Nós, da Alura, somos uma das Scale-Ups
+selecionadas pela Endeavor, programa de aceleração das empresas que
+mais crescem no país.</span></li><li
+class="footer-navegue-lista-link --description footer-column-cards">
+<img
+src="/assets/img/footer/google-alumni-2021.1686744881.png" alt="Growth Academy 2021 do Google For Startups"
+class="footer-navegue-lista__image" loading="lazy">
+<span
+class="footer-navegue-lista-link --description --partners">Fomos uma das 7 startups selecionadas pelo
+Google For Startups a participar do programa Growth Academy em
+2021.</span></li></ul></div></div></footer><section
+class="footer_categorias-formacoes"><div
+class="container"><div
+class="footer_categorias_wrapper"><h2 class="footer_categorias_title">Cursos</h2><div
+class="footer_categorias_categorias footer-navegue-lista-link"><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-programacao">Cursos de Programação</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-programacao/logica">
+Lógica            </a>
+|                        <a
+href="/cursos-online-programacao/python">
+Python            </a>
+|                        <a
+href="/cursos-online-programacao/php">
+PHP            </a>
+|                        <a
+href="/cursos-online-programacao/java">
+Java            </a>
+|                        <a
+href="/cursos-online-programacao/dotnet">
+.NET            </a>
+|                        <a
+href="/cursos-online-programacao/node-js">
+Node JS            </a>
+|                        <a
+href="/cursos-online-programacao/linguagem-c">
+C            </a>
+|                        <a
+href="/cursos-online-programacao/computacao">
+Computação            </a>
+|                        <a
+href="/cursos-online-programacao/jogos">
+Jogos            </a>
+|                        <a
+href="/cursos-online-programacao/internet-das-coisas">
+IoT            </a></div></div><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-front-end">Cursos de Front-end</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-front-end/front-end">
+HTML, CSS            </a>
+|                        <a
+href="/cursos-online-front-end/reactjs">
+React            </a>
+|                        <a
+href="/cursos-online-front-end/angular">
+Angular            </a>
+|                        <a
+href="/cursos-online-front-end/javascript">
+JavaScript            </a>
+|                        <a
+href="/cursos-online-front-end/jquery">
+jQuery            </a></div></div><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-data-science">Cursos de Data Science</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-data-science/data-science">
+Ciência de dados            </a>
+|                        <a
+href="/cursos-online-data-science/business-intelligence">
+BI            </a>
+|                        <a
+href="/cursos-online-data-science/sql">
+SQL e Banco de Dados            </a>
+|                        <a
+href="/cursos-online-data-science/excel">
+Excel            </a>
+|                        <a
+href="/cursos-online-data-science/machine-learning">
+Machine Learning            </a>
+|                        <a
+href="/cursos-online-data-science/nosql">
+NoSQL            </a>
+|                        <a
+href="/cursos-online-data-science/estatistica">
+Estatística            </a></div></div><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-inteligencia-artificial">Cursos de Inteligência Artificial</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-inteligencia-artificial/ia-para-programacao">
+IA para Programação            </a>
+|                        <a
+href="/cursos-online-inteligencia-artificial/ia-para-dados">
+IA para Dados            </a></div></div><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-devops">Cursos de DevOps</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-devops/aws">
+AWS            </a>
+|                        <a
+href="/cursos-online-devops/azure">
+Azure            </a>
+|                        <a
+href="/cursos-online-devops/containers">
+Docker            </a>
+|                        <a
+href="/cursos-online-devops/seguranca">
+Segurança            </a>
+|                        <a
+href="/cursos-online-devops/infraestrutura-como-codigo">
+IaC            </a>
+|                        <a
+href="/cursos-online-devops/linux-comandos-e-processos">
+Linux            </a></div></div><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-design-ux">Cursos de UX & Design</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-design-ux/ux">
+Usabilidade e UX            </a>
+|                        <a
+href="/cursos-online-design-ux/video">
+Vídeo e Motion            </a>
+|                        <a
+href="/cursos-online-design-ux/3d">
+3D            </a></div></div><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-mobile">Cursos de Mobile</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-mobile/react-native">
+React Native            </a>
+|                        <a
+href="/cursos-online-mobile/flutter-mobile">
+Flutter            </a>
+|                        <a
+href="/cursos-online-mobile/ios">
+iOS e Swift            </a>
+|                        <a
+href="/cursos-online-mobile/android">
+Android, Kotlin            </a>
+|                        <a
+href="/cursos-online-mobile/jogos">
+Jogos            </a></div></div><div
+class="footer_categorias_categoria">
+<a
+href="/cursos-online-inovacao-gestao">Cursos de Inovação & Gestão</a><div
+class="footer_categorias_subcategorias">
+<a
+href="/cursos-online-inovacao-gestao/agilidade">
+Métodos Ágeis            </a>
+|                        <a
+href="/cursos-online-inovacao-gestao/softskills-carreira">
+Softskills            </a>
+|                        <a
+href="/cursos-online-inovacao-gestao/gestao-corporativa">
+Liderança e Gestão            </a>
+|                        <a
+href="/cursos-online-inovacao-gestao/startup-empreendedorismo">
+Startups            </a>
+|                        <a
+href="/cursos-online-inovacao-gestao/vendas">
+Vendas            </a></div></div></div></div></div></section><style>@media not all and (min-width: 1024px) {
+			.grupoCaelum {
+				display: none;
+			}
+		}
+
+		.grupoCaelum {
+			background: #fff;
+			height: 400px;
+			border-top: 1px solid #EBEBEE;
+		}
+
+		.grupoCaelum .container {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			padding-top: 0;
+			padding-bottom: 0;
+			height: 100%;
+		}
+
+		.grupoCaelum-list {
+			display: flex;
+			list-style: none;
+			width: 80%;
+			justify-content: space-between;
+			align-items: flex-start;
+			margin-top: 1.25rem;
+		}
+
+		.grupoCaelum-title {
+			width: 20%;
+		}
+
+		.grupoCaelum-column {
+			display: inline-block;
+			padding-left: 1.1875rem;
+			width: 240px;
+			height: 350px;
+			min-width: 160px;
+		}
+
+		.grupoCaelum-column-title {
+			font-size: 0.625rem;
+			color: #d7e0e5;
+			text-transform: uppercase;
+			font-weight: 600;
+			margin-bottom: 1.1875rem;
+		}
+
+		.grupoCaelum-column-list {
+			list-style: none;
+		}
+
+		.column-item-title {
+			font-size: 0.6875rem;
+			text-align: center;
+			vertical-align: middle;
+			display: inline-block;
+			margin-left: 0.375rem;
+		}
+
+		.grupoCaelum-column:not(:first-child) {
+			border-left: solid 1px #e3e9ed;
+		}
+
+		.grupoCaelum-title {
+			display: inline-block;
+			text-decoration: none;
+			color: #657176;
+			letter-spacing: normal;
+			font-size: 1.125rem;
+			margin-top: 3.375rem;
+		}
+
+		.column-item-logo {
+			width: 30px;
+			height: 30px;
+			vertical-align: middle;
+			display: inline-block;
+		}
+
+		.column-item {
+			margin-bottom: 1.0625rem;
+		}
+
+		.column-item a {
+			text-decoration: none;
+			color: #657176;
+			display: flex;
+			align-items: center;
+		}</style><footer
+class="caelum-footer" id="caelum-footer"><div
+class="grupoCaelum"><div
+class="container"><p
+class="grupoCaelum-title">Alura</p><ul
+class="grupoCaelum-list"><li
+class="grupoCaelum-column"><p
+class="grupoCaelum-column-title">Educação em Tecnologia</p><ul
+class="grupoCaelum-column-list"><li
+class="column-item">
+<a
+target="_blank" href="https://www.fiap.com.br/">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/fiap.1686744881.svg" alt="logo fiap" loading="lazy" />
+<span
+class="column-item-title">FIAP</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://www.casadocodigo.com.br">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/cdc.1686744881.svg" alt="logo casa do codigo" loading="lazy" />
+<span
+class="column-item-title">Casa do Código</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" style="fill: #657176" href="https://www.cursospm3.com.br/">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/pm3.1686744881.svg" alt="logo pm3" loading="lazy" />
+<span
+class="column-item-title">PM3 - Cursos de Produto</span>
+</a></li></ul></li><li
+class="grupoCaelum-column"><p
+class="grupoCaelum-column-title">Mais Alura</p><ul
+class="grupoCaelum-column-list"><li
+class="column-item">
+<a
+target="_blank" href="https://www.alurastart.com.br">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/alurastart.1686744881.svg" alt="logo alura start" loading="lazy" />
+<span
+class="column-item-title">Alura Start</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://www.aluralingua.com.br">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/aluralingua.1686744881.svg" alt="logo alura lingua" loading="lazy" />
+<span
+class="column-item-title">Alura Língua</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://www.alura.com.br/empresas">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/alura-empresas.1686744881.svg" alt="logo alura para empresas" loading="lazy" />
+<span
+class="column-item-title">Alura Para Empresas</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://www.aluracursos.com">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/alura.1686744881.svg" alt="logo alura latam" loading="lazy" />
+<span
+class="column-item-title">Alura LATAM</span>
+</a></li></ul></li><li
+class="grupoCaelum-column"><p
+class="grupoCaelum-column-title">Comunidade</p><ul
+class="grupoCaelum-column-list"><li
+class="column-item">
+<a
+target="_blank" href="
+https://techguide.sh/								">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/techguide.1686744881.svg" alt="logo tech guide" loading="lazy" />
+<span
+class="column-item-title">Tech Guide</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://7daysofcode.io/">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/7days.1686744881.svg" alt="logo 7 days of code"loading="lazy" />
+<span
+class="column-item-title">7 days of code</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://hipsters.jobs">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/hipstersjobs.1686744881.svg" alt="logo Hipsters ponto Jobs" loading="lazy" />
+<span
+class="column-item-title">Hipsters ponto Jobs</span>
+</a></li></ul></li><li
+class="grupoCaelum-column"><p
+class="grupoCaelum-column-title">Podcasts</p><ul
+class="grupoCaelum-column-list"><li
+class="column-item">
+<a
+target="_blank" href="https://hipsters.tech">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/hipsterstech.1686744881.svg" alt="logo Hipsters ponto Tech" loading="lazy" />
+<span
+class="column-item-title">Hipsters ponto Tech</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://www.devsemfronteiras.tech/">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/devsemfronteiras.1686744881.svg" alt="logo Dev sem fronteiras" loading="lazy" />
+<span
+class="column-item-title">Dev sem Fronteiras</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://layerspontotech.com.br">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/layerstech.1686744881.svg" alt="logo Layers ponto Tech" loading="lazy" />
+<span
+class="column-item-title">Layers ponto Tech</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://scuba.dev.br">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/scubadev.1686744881.svg" alt="logo Scuba Dev" loading="lazy" />
+<span
+class="column-item-title">Scuba Dev</span>
+</a></li><li
+class="column-item">
+<a
+target="_blank" href="https://bolhadev.tech/">
+<img
+class="column-item-logo" src="https://www.alura.com.br/assets/img/caelumFooter/bolhadev.1686744881.svg" alt="logo bolha dev" loading="lazy" />
+<span
+class="column-item-title">Bolha Dev</span>
+</a></li></ul></li></ul></div></div></footer> <script>(function(){
+    var match = location.pathname.match(/\/(bf-|black-?friday\/)([^\/]+)/);
+    if (match != null) {
+        var links = document.querySelectorAll('a[href]');
+        for (var i = 0; i < links.length; i++) {
+            var href = links[i].getAttribute('href');
+            if (href[0] === '/') {
+                links[i].setAttribute('href', '/bf-' + match[2] + href);
+            }
+        }
+    }
+})();</script> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" async></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/highlight.min.js"></script> <script>hljs.initHighlightingOnLoad();</script> <script src="/assets/js/lib/svg4everybody.min.1686744882.js" async></script> <script src="/assets/js/footer/footer.1686744882.js" defer></script> <script src="/assets/js/header/menu.1686744882.js" defer></script> <script src="/assets/js/header/busca.1687365821.js" defer></script> <script src="/assets/js/header/cursos.1686744882.js" defer></script> <script src="/assets/js/header/menuMobile.1687365821.js" defer></script> <script src="/assets/js/detect.1686744882.js" async></script> <script src="/assets/js/video.1686744882.js" defer></script> <script src="/assets/js/countdown.1686744882.js" async></script> <script src="/assets/js/header/cookie-influencer.1690566811.js" async></script> <script src="/assets/js/trackers.1686744882.js" async></script> <script src="/assets/js/courseIconFallback.1686744882.js" defer></script> <script type="text/javascript">_linkedin_partner_id = "465017";
+			window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+			window._linkedin_data_partner_ids.push(_linkedin_partner_id);</script> <script type="text/javascript">(function(){var s = document.getElementsByTagName("script")[0];
+			var b = document.createElement("script");
+			b.type = "text/javascript";b.async = true;
+			b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+			s.parentNode.insertBefore(b, s);})();</script> <noscript>
+<img
+height="1" width="1" style="display:none;" alt=""
+src="https://dc.ads.linkedin.com/collect/?pid=465017&fmt=gif" />
+</noscript> <script src="/assets/js/artigos/table-of-contents.1686744882.js" async></script> <script src="/assets/js/artigos/tracker-post-read.1690557002.js" async></script> <script src="https://static.codepen.io/assets/embed/ei.js" async></script> <script src="/assets/js/artigos/iframe-loader.1690557002.js" async></script> </body></html>
