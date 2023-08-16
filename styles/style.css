@@ -94,12 +94,12 @@ body {
     justify-content: center;
     gap: 16px;
     border: 2px solid var(--cor-terciaria);
-    width: 50%;
+    width: 23.6rem;
     text-align: center;
     border-radius: 8px;
     font-size: 1.5rem;
     font-weight: 600;
-    padding: 21.5px 0;
+    padding: 1.34rem 0;
     text-decoration: none;
     color: var(--cor-secundaria);
     font-family: var(--fonte-secundaria);
@@ -110,6 +110,10 @@ body {
     padding: 3%;
 }
 
+.apresentacao__links__link__logo{
+    width: 2rem;
+    height: 2rem;
+}
 
 .rodape{
     padding: 1.5rem;
