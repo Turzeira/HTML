@@ -147,5 +147,8 @@ body {
     .apresentacao__conteudo{
         width: auto;
     }
+    .imagem-reduzida {
+        width: 60%;
+    }    
 
 }
