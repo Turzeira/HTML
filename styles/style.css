@@ -106,7 +106,6 @@ body {
 
 .apresentacao__links__link:hover{
     background-color: #272727;
-    padding: 3%;
 }
 
 .apresentacao__links__link__logo{
@@ -148,6 +147,10 @@ body {
     }
     .imagem-reduzida {
         width: 60%;
-    }    
+    }
+
+    .apresentacao__links__link{
+        width: 15rem;
+    }
 
 }
